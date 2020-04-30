@@ -1,0 +1,5 @@
+{
+  "editor.fontSize": 15, // sets the font size of the editor itself
+  "inlinePreview.disabled": false, // disables the inline-preview. this is useful if you're working on something resource-intensive, but runtime errors will no longer be reported
+  "javascript.eslint.disabled": false // disables eslint. this is useful if you're working with large js files, but many errors and warnings will no longer be reported
+}
