@@ -30,14 +30,107 @@ ul{
 	margin-bottom:60px;
 }
 
-.project-list{
-	width:80%;
-}
-
 .container{
 	max-width: 1000px;
 	padding:0 60px;
 	margin:0 auto;
+}
+
+.about{
+	position: relative;
+	height:100vh;
+	width:100%
+
+}
+
+.sentence{
+	max-width: 30vw;
+	font-size: 36px;
+	position:relative;
+	top: 40%;
+	left:40%;
+
+	text-align:center;
+
+}
+
+.projects div.info{
+	font-size: 14px;
+	font-weight:600;
+
+}
+
+.project-container{
+	position:relative;
+}
+
+
+div.card-r .tile-container{
+	display:flex;
+	align-items:flex-start;
+	justify-content: flex-end;
+	flex-direction:row;
+	text-align:right;
+}
+
+div.card-l .tile-container{
+	display:flex;
+	align-items:flex-start;
+	justify-content: flex-start;
+	flex-direction:row;
+	text-align:right;
+}
+
+.card-r .rotate{
+	writing-mode: vertical-rl;
+	text-orientation:sideways;
+	transform:rotate(180deg)
+}
+
+.card-l .rotate{
+	writing-mode: vertical-rl;
+	text-orientation:sideways;
+}
+
+.project-title{
+	position: absolute;
+	font-size: 32px;
+	font-weight: 600;
+	top:80%;
+	left:30%
+}
+
+.card-r .project-title{
+	top:80%;
+	left:50%;
+}
+
+.project-container .tile-container .tile{
+	width: 320px;
+	height:320px; 
+	background-color: var(--yellow);
+}
+
+
+
+
+.mflabs .tile-container .tile{
+	background-color: var(--pink);
+}
+.pay-interns .tile-container .tile{
+	background-color: var(--green);
+}
+.superhi .tile-container .tile{
+	background-color: var(--blue);
+}
+
+
+
+
+
+
+.project-list{
+	width:80%;
 }
 
 .section-divider{
