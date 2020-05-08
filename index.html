@@ -9,29 +9,60 @@
 		<link rel="stylesheet" href="/_base.css">
 		<link rel="stylesheet" href="/style.css">
 		<link rel="stylesheet" href="/variables.css">
+		<link rel = "stylesheet" href = "sidebar.css">
 	</head>
 	<body>
 
 
 
+		<div class = "sidebar">
+			<a class = "linkedin icon">
+				<img src = "glyphs/linkedin-w-2.png">
+			</a>
+
+			<a class = "insta icon">
+				<img src = "glyphs/insta-white.png">
+			</a>
+
+			<div class = "mailbar">
+				<span class = "line"></span>
+				<a class = "mail">
+					<img src = "glyphs/mail-icon.png">
+				</a>
+			</div>
+
+			<a class = "record icon">
+				<img src = "glyphs/record.png">
+			</a>
+
+		</div>
 
 
 
+<section class = "hero">
+	<div class = "hero-sentence">
 
+		<div class = "line1 line">
+			<h1 class = "herotext">hi, I'm silja. I'm a </h1> <div class = "slot shortslot">coder</div>
+		</div>
+	
+		<div class = "line2 line">
+			<h1 class = "herotext">and </h1> <div class = "slot">designer</div> <h1 class = "herotext">based</h1>
+		</div>
+	
+		<div class = "line3 line">
+			<h1 class = "herotext">in Toronto.</h1>
+		</div>
 
+	</div>
 
+</section>
 
 
 
 		<div class = "container">
 
-			<section class = "about">
-				<div class = "sentence">
-					<h2>I design and build websites. I also rock climb, edit youtube videos, and make tarot cards decks.</h2>
-				</div>
-
-			</section>
-
+	
 			<section class = "projects">
 				<div class = "section-divider">
 					<h1 class = "section-title">my personal favourites:</h1>
@@ -39,49 +70,52 @@
 
 
 				<div class = "project-container mflabs card-l">
-					<div class = "tile-container">
+					<a href = "http://www.materialfutureslab.com/" class = "tile-container">
 						<div class = "tile"></div>
 						<div class = "info rotate">Design, UX, Build</div>
-					</div>
-					<div class = "project-title">material futures</div>
+					</a>
+					<div class = "project-title" data-parallax = "0.08">material futures</div>
 				</div>
 
 				<div class = "project-container datalabs card-r">
-					<div class = "tile-container">
-						<div class = "info rotate">Logo, Design, UX</div>
-						<div class = "tile"></div>
-					</div>
-					<div class = "project-title">DataLabs</div>
+						<a href = "#" class = "tile-container">
+							<div class = "info rotate">Logo, Design, UX</div>
+							<div class = "tile"></div>
+						</a>
+						<div class = "project-title" data-parallax = "0.1">DataLabs</div>
 				</div>
 
 				<div class = "project-container pay-interns card-l">
-					<div class = "tile-container">
+					<a href = "www.payinterns.superhi.com" class = "tile-container">
 						<div class = "tile"></div>
 						<div class = "info rotate">Design, UX, Build</div>
-					</div>
-					<div class = "project-title">PayInterns</div>
+					</a>
+					<div class = "project-title"data-parallax = "0.08">PayInterns</div>
 				</div>
 
 				<div class = "project-container superhi card-r">
-					<div class = "tile-container">
+					<a href = "www.triplea.superhi.com" class = "tile-container">
 						<div class = "info rotate">Student: Design, Code, UX</div>
 						<div class = "tile"></div>
-					</div>
-					
-					<div class = "project-title">Superhi Projects</div>
+					</a>
+					<div class = "project-title" data-parallax = "0.1">Superhi Projects</div>
 				</div>
-
 			</section>
-
-
 
 
 
 			<section class = "cv">
 				<div class = "section-divider">
 					<h1 class = "section-title">what i've done</h1>
+					<div class = "svg">
+						<svg class = "wave wave-cv">
+							<path d = ""></path>
+						</svg>
+					</div>
 				</div>
 				
+
+
 				<div class = "columns">
 					<div class = "column">
 						<div class = "cv-title">
@@ -104,6 +138,17 @@
 						</ul>
 						<div class = "contact-text">
 							<p>want to know more about any of this? I'm easy to get in touch with</p>
+							<div class = "cv-socials">
+								<a class = "cv-social-icon" href = "mailto:siljawalenius@gmail.com">
+									<img class = "socials-img" src = "glyphs/mail-icon.png">
+								</a>
+								<a class = "cv-social-icon" href = "https://www.linkedin.com/in/siljawalenius/">
+									<img class = "socials-img" src = "glyphs/linkedin-w-2.png">
+								</a>
+								<a class = "cv-social-icon" href = "https://www.instagram.com/siljawalenius/?hl=en">
+									<img class = "socials-img" src = "glyphs/insta-white.png">
+								</a>
+							</div>
 							<p>(or just yell loudly out of any window in toronto) </p>
 						</div>
 					</div>
@@ -143,11 +188,53 @@
 					</a>
 				</div>
 			</section>
+
+
+			<section class = "cards">
+
+				<div class = "section-divider">
+					<h1 class = "section-title">what I would (really) love to do</h1>
+				</div>
+
+				<div class = "card-container">
+
+					<div class = " goal-card card-1">
+						<span>any project at all for Kanye West</span>
+					</div>
+					<div class = " goal-card card-2">
+						<span> work with creative teams who push the limits of what tech can do</span>
+					</div>
+					<div class = "goal-card card-3">
+						<span>
+							creative tech design and development projects
+						</span>
+
+					</div>
+					<div class = "goal-card card-4">
+						<span>technology for architecture, urban design, and new ways of living</span>
+
+					</div>
+
+					<div class = "under-text">
+						<p>sound like you? keep scrolling</p>
+					</div>
+
+				</div>
+
+			</section>
+
 		</div>
+
 
 		<section class = "contact">
 
 			<div class = "container">
+				<div class = "svg svg-contact">
+					<svg class = "wave wave-contact">
+						<path d = ""></path>
+					</svg>
+				</div>
+
 				<div class = "contact-main">
 					<h1 class = "big">drop me a line!</h1>
 					<p>i'm always excited to talk about new projects, oppourtunities, and ideas.</p>
@@ -156,11 +243,22 @@
 
 
 				<div class = "socials">
-					<div class = "social-icon"></div>
-					<div class = "social-icon"></div>
-					<div class = "social-icon"></div>
-					<div class = "social-icon"></div>
-					<div class = "social-icon"></div>
+				
+					<a class = "social-icon" href = "https://www.instagram.com/siljawalenius/?hl=en">
+						<img class = "socials-img" src ="glyphs/insta-white.png">
+					</a>
+					<a class = "social-icon" href = "https://twitter.com/siljaaaaaa">
+						<img class = "socials-img" src = "glyphs/tw-w-logo.png">
+					</a>
+					<a class = "social-icon" href = "https://www.linkedin.com/in/siljawalenius">
+						<img class = "socials-img" src = "glyphs/linkedin-w-2.png">
+					</a>
+					<a class = "social-icon" href = "mailto:siljawalenius@gmail.com">
+						<img class = "socials-img" src = "glyphs/mail-icon.png">
+					</a>
+					<a class = "social-icon" href = "#">
+						<img class = "socials-img" src = "glyphs/dribble-white.png">
+					</a>
 				</div>
 			
 				<div class = "end-line">
@@ -173,9 +271,13 @@
 		</section>
 
 
-
-
+			
 
 
 	</body>
+
+	<script src = "p5.min.js"></script>
+	<script src = "app.js"></script>
+	<script src = "content.js"></script>
+	<script src = "svg.js"></script>
 </html>
