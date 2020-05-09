@@ -3,7 +3,6 @@ const projectTags = document.querySelectorAll("section.projects div.project-cont
 
 let easing = t => 1-(--t)*t*t*t //taken from github 
 
-console.log("hi rik look in the content.js file")
 
 //on page scroll, parallax things
 // parallax is a ratio from middle dist. scrolled to middle point of anchor
@@ -34,50 +33,115 @@ document.addEventListener("scroll", function(){
 
 
 
-//for hero section slot machine type of deal
 
-const shortNouns = ['coder', 'runner', 'yogi', 'gemini', 'cyclist', 'hippie', 'techie', 'hipster', 'psychic']
-const longNouns = ['designer', 'coffee addict', 'rock climber', 'student', 'photographer', 'chalamet fan', 'circus performer', 'whitewater kayaker', 'camper', 'art nerd', 'wanabe surfer', 'optimist']
-//const shortList = bodyTag.querySelector('div.shortword')
-//const longList = bodyTag.querySelector('div.longword')
-const shortSlot = bodyTag.querySelector('div.shortslot')
-const longSlot = bodyTag.querySelector('div.longslot')
+
+
+
+
+
+
+
+
+//for hero section slot machine type of deal
+const shortNouns = ['cyclist', 'runner', 'yogi', 'gemini', 'coder', 'hippie', 'techie', 'psychic', 'kayaker']
+const longNouns = ['chalamet fan', 'coffee addict', 'rock climber', 'student', 'photographer', 'designer', 'circus performer', 'camper', 'art nerd', 'wanabe surfer', 'optimist']
 const shortWord = document.querySelector('span.shortword')
 const longWord = document.querySelector('span.longword')
 //see in old.js for the prev. 
 
-let runSlots = (array, word) => {
+//storing trigger buttons to control what to do 
+const upButtonShort = document.querySelector('div.uparrow.short')
+const downButtonShort = document.querySelector('div.downarrow.short')
+const upButtonLong = document.querySelector('div.uparrow.long')
+const downButtonLong = document.querySelector('div.downarrow.long')
+
+
+
+let startSlots = (array, word) => {
     //starting condition 
     const mid = Math.floor(array.length / 2) 
     const startWord = document.createTextNode(array[mid])
-    word.appendChild(startWord)
+    word.appendChild(startWord) //adding initial word to the span 
+    console.log(word.innerHTML) //checking to make sure we good
+}
 
-    //storing trigger buttons to control what to do 
-    const upButtonShort = document.querySelector('button.up1')
-    const downButtonShort = document.querySelector('button.down1')
-    const upButtonLong = document.querySelector('button.up2')
-    const downButtonLong = document.querySelector('button.down2')
+//click event for UP button 
+upButtonShort.addEventListener("click", () => {
+    animateUp(shortWord, shortNouns)
+})
 
-    upButtonShort.addEventListener("click", () => {
-        console.log(upButtonShort)
-        advanceSlot(shortNouns, shortWord)
+upButtonLong.addEventListener("click", () => {
+    animateUp(longWord, longNouns)
+})
+
+downButtonShort.addEventListener("click", () => {
+    animateDown(shortWord, shortNouns)
+})
+
+downButtonLong.addEventListener("click", () => {
+    animateDown(longWord, longNouns)
+})
+
+
+const advanceSlot = (wordList, wordSpan) => {
+    //console.log("slot advances")
+    //get index of currently displayed word 
+    let curWord = wordSpan.textContent; 
+    let curPosition = wordList.indexOf(curWord)
+    let nextPosition = curPosition + 1
+    if (nextPosition >= wordList.length){
+        nextPosition = 0
+     }
+    //console.log(curPosition, nextPosition)
+
+    //create new text node
+    word = document.createTextNode(wordList[nextPosition])
+
+    //replace existing text node with new text node 
+    wordSpan.replaceChild(word, wordSpan.childNodes[0])
+
+}
+
+
+const decreaseSlot = (wordList, wordSpan) => {
+    let curWord = wordSpan.textContent; 
+    let curPosition = wordList.indexOf(curWord)
+    let nextPosition = curPosition - 1
+    if (nextPosition < 0){
+        nextPosition = wordList.length - 1 
     }
-        
-    )
+        //create new text node
+        word = document.createTextNode(wordList[nextPosition])
 
+        //replace existing text node with new text node 
+        wordSpan.replaceChild(word, wordSpan.childNodes[0])
+    
 }
 
-const advanceSlot = (wordList, wordSpan, mid) => {
-    console.log("stop firing so much")
+const animateDown = (word, wordList) =>{
+
+    word.style.transform = 'translate(0, 100%)'
+    setTimeout(()=>{ decreaseSlot(wordList, word)}, 300)
+    setTimeout( () => {word.style.opacity = '0'}, 300)
+    setTimeout( () => {word.style.transform = 'translate(0, -100%)'}, 300)
+    setTimeout( () => {word.style.opacity = '1'}, 460)
+    setTimeout( () => {word.style.transform = 'translate(0, 0)'}, 460)
+}
 
 
+const animateUp = (word, wordList) => {
+    word.style.transform = 'translate(0, -100%)'
 
-
-
+    setTimeout( ()=>{ advanceSlot(wordList, word)}, 300)
+    setTimeout( () => {word.style.opacity = '0'}, 300)
+    setTimeout( () => {word.style.transform = 'translate(0, 100%)'}, 300)
+    setTimeout( () => {word.style.opacity = '1'}, 450)
+    setTimeout( () => {word.style.transform = 'translate(0, 0)'}, 450)
 }
 
 
 
 
-runSlots(shortNouns, shortSlot)
-runSlots(longNouns, longSlot)
+
+startSlots(shortNouns, shortWord)
+startSlots(longNouns, longWord)

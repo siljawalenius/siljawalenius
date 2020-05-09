@@ -5,6 +5,8 @@ body {
 	
 	background-color: #ffffff;
 	color: var(--grey);
+
+	overflow-x: hidden;
 }
 
 a{
@@ -42,6 +44,8 @@ canvas{
 
 }
 
+
+
 section.hero{
 	height:100vh;
 	width:100vw;
@@ -50,6 +54,7 @@ section.hero{
 	align-items:center;
 	justify-content:center;
 	align-content: center;
+
 
 }
 
@@ -89,9 +94,13 @@ div.slot{
 
 	font-size: 42px;
 	font-weight:600;
-	text-align:center;
 
-	vertical-align: middle;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+
+	overflow-y:hidden; 
+
 }
 
 div.shortslot{
@@ -105,10 +114,75 @@ span.words{
 	text-align:center;
 
 	width:100%;
-	height:100%;
+
+	 transition: transform 0.3s ease;
+
+}
+
+span.name{
+	cursor:default;
 }
 
 
+div.arrow{
+	width:40px;
+	height:21px;
+	display:block;
+	margin-bottom: 15px;
+
+	cursor:pointer;
+}
+
+div.downarrow img{
+	transform:rotate(180deg);
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+div.tag-arrow{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+
+div.svg.wave-small{
+	height:20px;
+	width:120px;
+	position:absolute;
+	top:0;
+	left:0;
+	margin-left:0;
+}
+
+
+svg.wave.wave-name{
+	width:123px;
+	height:20px;
+}
+
+.wave-name path{
+	stroke: var(--green);
+	stroke-width:7px;
+}
+
+.pronounce{
+	color:var(--green);
+	font-weight: 600;
+
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+
+	transition:all 0.3s ease;
+	transform:translate(0,0);
+}
+
+.pronounce.visible{
+	opacity:1;
+	transform:translate(0, -10px);
+}
 
 
 
@@ -348,13 +422,17 @@ div.card-l  .tile-container{
 .cards{
 	padding-top: 160px;
 	width:100%;
-	height:90vh;
+	height:100vh;
 	position:relative;
 }
 
 .cards .section-divider{
+	z-index:-1;
+	margin-bottom:0
+}
+
+.cards .section-divider{
 	justify-content:center;
-	margin-bottom:120px
 }
 
 .card-container{
@@ -362,14 +440,17 @@ div.card-l  .tile-container{
 	overflow:hidden;
 
 	height:90%;
-	width:400px;
+	width:100%;
 	top:0;
 	left:50%;
-	transform:translateX(-50%)
+	transform:translateX(-50%);
+
+	/* THIS IS HERE TO ALLOW CARDS MORE MOVEMENT*/
+	padding-bottom:5vh;
 }
 
 .goal-card{
-	width:100%;
+	width:400px;
 	height:300px;
 
 	border-radius: 36px;
@@ -383,8 +464,13 @@ div.card-l  .tile-container{
 
 	position:absolute;
 	top: 0;
+	/*left:50%; */
+	/*transform:translateX(-50%);*/
+
 
 	color:var(--brown);
+
+	cursor:pointer;
 }
 
 .goal-card span{
@@ -397,7 +483,7 @@ div.card-l  .tile-container{
 
 .card-1{
 	z-index:2;
-	top:0px;
+	top: 0px;
 }
 
 .card-2{
@@ -443,7 +529,7 @@ div.card-l  .tile-container{
 	height:100vh;
 	position: relative;
 	overflow: hidden;
-	margin-top: 5%;
+	/*margin-top: 5%; */
 	margin-bottom:30px;
 }
 

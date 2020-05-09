@@ -37,30 +37,59 @@
 
 		</div>
 
-		<button class = "up1">up short</button>
-		<button class = "down1">down short</button>
-		<button class = "up2">up long</button>
-		<button class = "down2">down long</button>
-	
 	
 
 <section class = "hero">
 
+	<div class = "svg wave-small name-wave">
+		<svg class = "wave wave-name">
+			<path d = "" class = "small-wave"></path>
+		</svg>
+	</div>
+
+	<span class = "pronounce">
+		<p>you pronounce it like celia</p>
+	</span>
+
 	<div class = "hero-sentence">
 		<div class = "line1 line">
-			<h1 class = "herotext">hi, I'm silja. I'm a </h1> <div class = "slot shortslot">
-				
-				<span class = "words shortword"></span>
+			<h1 class = "herotext">hi, I'm <span class = "name">silja.</span> I'm a </h1> 
+			<div class = "tag-arrow">
+
+				<div class = "arrow uparrow short">
+					<img class = "up arrow" src = "svg/uparrowpink.svg"></img>
+				</div>
+
+				 <div class = "slot shortslot">
+					<span class = "words shortword"></span>
+				</div>
+
+				<div class = "arrow downarrow short">
+					<img class = "up arrow" src = "svg/uparrowpink.svg"></img>
+				</div>
 
 			</div>
 		</div>
 	
 		<div class = "line2 line">
 			<h1 class = "herotext">and </h1> 
-			<div class = "slot longslot">
-				<span class = "words longword"></span>
 
-			</div> 
+			<div class = "tag-arrow">
+
+				<div class = "arrow uparrow long">
+					<img class = "up arrow" src = "svg/uparrowyellow.svg"></img>
+				</div>
+
+				<div class = "slot longslot">
+					<span class = "words longword"></span>
+				</div> 
+
+				<div class = "arrow downarrow long">
+					<img class = "up arrow" src = "svg/uparrowyellow.svg"></img>
+				</div>
+
+			</div>
+
 			<h1 class = "herotext">based</h1>
 		</div>
 	
@@ -123,7 +152,7 @@
 					<h1 class = "section-title">what i've done</h1>
 					<div class = "svg">
 						<svg class = "wave wave-cv">
-							<path d = ""></path>
+							<path d = "" class = "big-wave"></path>
 						</svg>
 					</div>
 				</div>
@@ -203,6 +232,7 @@
 				</div>
 			</section>
 
+		</div>
 
 			<section class = "cards">
 
@@ -212,19 +242,19 @@
 
 				<div class = "card-container">
 
-					<div class = " goal-card card-1">
+					<div class = " goal-card card-1 draggable" data-top= "0">
 						<span>any project at all for Kanye West</span>
 					</div>
-					<div class = " goal-card card-2">
+					<div class = " goal-card card-2 draggable" data-top="1">
 						<span> work with creative teams who push the limits of what tech can do</span>
 					</div>
-					<div class = "goal-card card-3">
+					<div class = "goal-card card-3 draggable">
 						<span>
 							creative tech design and development projects
 						</span>
 
 					</div>
-					<div class = "goal-card card-4">
+					<div class = "goal-card card-4 draggable">
 						<span>technology for architecture, urban design, and new ways of living</span>
 
 					</div>
@@ -237,7 +267,7 @@
 
 			</section>
 
-		</div>
+		
 
 
 		<section class = "contact">
@@ -245,7 +275,7 @@
 			<div class = "container">
 				<div class = "svg svg-contact">
 					<svg class = "wave wave-contact">
-						<path d = ""></path>
+						<path d = "" class = "big-wave"></path>
 					</svg>
 				</div>
 
@@ -291,7 +321,10 @@
 	</body>
 
 	<script src = "p5.min.js"></script>
+	<script src = "draggabilly.pkgd.min.js"></script>
 	<script src = "app.js"></script>
 	<script src = "content.js"></script>
 	<script src = "svg.js"></script>
+
+
 </html>
