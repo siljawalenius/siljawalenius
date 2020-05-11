@@ -78,6 +78,7 @@ section.hero{
 .line h1{
 	font-size: 48px;
 	font-weight:600;
+	color: var(--grey);
 
 	white-space: nowrap;
 
@@ -115,7 +116,9 @@ span.words{
 
 	width:100%;
 
-	 transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
+
+	color: var(--grey);
 
 }
 
@@ -271,7 +274,9 @@ div.card-l  .tile-container{
 	font-size: 32px;
 	font-weight: 600;
 	top:80%;
-	left:30%
+	left:30%;
+
+	text-shadow: 2px 2px 3px rgb(67, 66, 66, 0.3);
 }
 
 .card-r .project-title{
