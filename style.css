@@ -329,6 +329,7 @@ div.card-l  .tile-container{
 	flex-direction:row;
 	align-items:center;
 	justify-content: flex-start;
+	width:100%;
 }
 .cv-line{
 	display:block;
@@ -618,5 +619,7 @@ svg.wave-contact{
 }
 
 
-
+.media-overlay{
+	display:none;
+}
 
