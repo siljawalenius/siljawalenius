@@ -4,27 +4,55 @@
     left: 20px;
 }
 
+
+
 .sidebar a.icon{
     position:fixed;
+    width: 43px;
+    height: 43px;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:2px;
+
+    transition: all 0.5s ease-in;
+
+    border: solid 2px rgba(215, 215, 215, 0); 
+
+    cursor: pointer;
+    
+}
+
+.sidebar a.icon:hover{
+    border: solid 1px rgba(215, 215, 215, 1);
+    
+}
+
+.sidebar a.icon:hover .img-bg{
+    opacity:1;
+}
+
+.img-bg{
+    position:relative;
     width: 35px;
     height: 35px;
+    border-radius:50%;
+    
 
     display:flex;
     justify-content:center;
     align-items:center;
 
     background-color: var(--medgrey);
-    border-radius:50%;
-    margin:2px;
-    /* border: solid 1px rgba(67, 66, 66, 0); */
+    opacity:0.7;
 
-    transition: border 0.5s ease;
-    cursor:pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-.sidebar .icon:hover{
-    /* border: solid 1px rgba(67, 66, 66, 1); */
-}
+
 
 .sidebar a.record{
     position:fixed;
@@ -33,14 +61,17 @@
 
     opacity:1;
 
-    background-color: transparent;
+}
+
+.sidebar a.record .img-bg{
+    background-color: transparent
 }
 
 .linkedin img, .insta img{
     max-width:55%;
 }
 
-.mail img{
+.mail img, .back img{
     max-width:70%;
 }
 
@@ -80,18 +111,7 @@
 
 .mailbar a.mail{
     position:relative;
-    width: 35px;
-    height: 35px;
-    border-radius:50%;
-
     padding:2px;
-
-    background-color:var(--medgrey);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     transform:rotate(-30deg);
     /* border: solid 1px rgba(67, 66, 66, 0); */
     transition: all 0.5s ease-in-out
@@ -100,6 +120,10 @@
 .mailbar a.mail:hover{
     transform:rotate(30deg);
     /* border: solid 1px rgba(67, 66, 66, 1); */
+}
+
+.mailbar a.mail .img-bg{
+    opacity:0.8;
 }
 
 .sidebar .mailbar{

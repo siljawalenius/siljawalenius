@@ -43,7 +43,7 @@ document.addEventListener("scroll", function(){
 
 
 //for hero section slot machine type of deal
-const shortNouns = ['cyclist', 'runner', 'yogi', 'gemini', 'coder', 'hippie', 'techie', 'psychic', 'kayaker']
+const shortNouns = ['cyclist', 'runner', 'yogi', 'gemini', 'creative','coder', 'hippie', 'techie', 'psychic', 'kayaker']
 const longNouns = ['chalamet fan', 'coffee addict', 'rock climber', 'student', 'photographer', 'designer', 'circus performer', 'camper', 'art nerd', 'wanabe surfer', 'optimist']
 const shortWord = document.querySelector('span.shortword')
 const longWord = document.querySelector('span.longword')
@@ -62,7 +62,7 @@ let startSlots = (array, word) => {
     const mid = Math.floor(array.length / 2) 
     const startWord = document.createTextNode(array[mid])
     word.appendChild(startWord) //adding initial word to the span 
-    console.log(word.innerHTML) //checking to make sure we good
+    // console.log(word.innerHTML) //checking to make sure we good
 }
 
 //click event for UP button 

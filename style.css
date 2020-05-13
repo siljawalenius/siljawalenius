@@ -5,8 +5,6 @@ body {
 	
 	background-color: #ffffff;
 	color: var(--grey);
-
-	overflow-x: hidden;
 }
 
 a{
@@ -24,6 +22,7 @@ h1 {
 h2{
 	font-size:24px;
 	font-weight:600;
+	white-space: nowrap;
 }
 li{
 	font-size:18px;

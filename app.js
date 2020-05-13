@@ -4,7 +4,7 @@ const lastSection = document.querySelector("section.contact")
 //
 
 function setup(){
-    let cnavas = createCanvas(450, 450)
+    let canvas = createCanvas(450, 450)
     lastSection.appendChild(canvas)
    // console.log(lastSection)
 }
