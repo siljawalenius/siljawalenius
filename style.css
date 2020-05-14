@@ -240,6 +240,32 @@ div.container{
 	margin-top: 100px;
 }
 
+div.card-l  .tile-container{
+	display:flex;
+	flex-direction:row;
+	align-items:flex-start;
+	justify-content: flex-start;
+	text-align:right;
+}
+
+.tile-info{
+	display:flex;
+	flex-direction:row;
+	align-items:flex-start;
+	justify-content: flex-start;
+	text-align:right;
+
+	transition:all 0.3s ease;
+}
+
+.tile-container .tile-info:hover{
+	transform: translateX(10px);
+}
+
+.card-r .tile-info:hover{
+	transform: translateX(-10px);
+}
+
 
 div.card-r  .tile-container{
 	display:flex;
@@ -249,13 +275,10 @@ div.card-r  .tile-container{
 	text-align:right;
 }
 
-div.card-l  .tile-container{
-	display:flex;
-	align-items:flex-start;
-	justify-content: flex-start;
-	flex-direction:row;
-	text-align:right;
-}
+
+
+
+
 
 .card-r .rotate{
 	writing-mode: vertical-rl;
@@ -275,8 +298,13 @@ div.card-l  .tile-container{
 	top:80%;
 	left:30%;
 
+	cursor: default;
+
 	text-shadow: 2px 2px 3px rgb(67, 66, 66, 0.3);
+
+	transition: all 0.3s; 
 }
+
 
 .card-r .project-title{
 	top:80%;
@@ -535,7 +563,7 @@ div.card-l  .tile-container{
 	position: relative;
 	overflow: hidden;
 	/*margin-top: 5%; */
-	margin-bottom:30px;
+	margin-bottom:60px;
 }
 
 .contact-main{
@@ -581,7 +609,7 @@ div.card-l  .tile-container{
 	font-weight: 600;
 
 	margin-top:100px;
-	padding-bottom:20px;
+	margin-bottom:30px;
 
 }
 

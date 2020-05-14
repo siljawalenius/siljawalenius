@@ -4,9 +4,12 @@ const lastSection = document.querySelector("section.contact")
 //
 
 function setup(){
-    let canvas = createCanvas(450, 450)
+  
+    let cnvas = createCanvas(450, 450)
+    // note: no idea why my hexagon is working without this... but it does
     lastSection.appendChild(canvas)
-   // console.log(lastSection)
+    console.log(lastSection)
+    
 }
 
 function draw(){

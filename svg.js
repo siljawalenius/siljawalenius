@@ -98,22 +98,27 @@ animateSmall()
 //positioning the "pronounce" text over my name
 
 let name = document.querySelector("span.name")
-let nameX = name.getBoundingClientRect().left
-let nameY = name.getBoundingClientRect().bottom
-let nameYTop = name.getBoundingClientRect().top
-let nameW = name.getBoundingClientRect().width
-let nameWave = document.querySelector('div.name-wave')
 
+let nameWave = document.querySelector('div.name-wave')
 let pronounceText = document.querySelector('span.pronounce')
 
-nameWave.style.top = nameY + `px`
-nameWave.style.left = nameX + `px`
-nameWave.style.width = nameW - 6 + `px`
+const placeElements = () =>{
+    let nameX = name.getBoundingClientRect().left
+    let nameY = name.getBoundingClientRect().bottom
+    let nameYTop = name.getBoundingClientRect().top
+    let nameW = name.getBoundingClientRect().width
 
-pronounceText.style.top = nameYTop - 50 + `px`
-pronounceText.style.left = nameX - (nameW /2.5) + `px`
 
-console.log(nameX,nameY,nameWave)
+    nameWave.style.top = nameY + `px`
+    nameWave.style.left = nameX + `px`
+    nameWave.style.width = nameW - 6 + `px`
+
+    pronounceText.style.top = nameYTop - 50 + `px`
+    pronounceText.style.left = nameX - (nameW /2.5) + `px`
+}
+
+
+placeElements()
 
 
 name.addEventListener("mouseover", () =>{
@@ -122,4 +127,9 @@ name.addEventListener("mouseover", () =>{
 
 name.addEventListener('mouseout', () => {
     pronounceText.classList.remove("visible")
+})
+
+window.addEventListener("resize", () =>{
+    placeElements()
+
 })

@@ -1,14 +1,15 @@
 const bodyTag = document.querySelector("body")
 const projectTags = document.querySelectorAll("section.projects div.project-container")
 
+
 let easing = t => 1-(--t)*t*t*t //taken from github 
 
 
 //on page scroll, parallax things
 // parallax is a ratio from middle dist. scrolled to middle point of anchor
 document.addEventListener("scroll", function(){
-    const topView = window.pageYOffset
-    const midView = topView + window.innerHeight/2
+    const pixels = window.pageYOffset
+    const midView = pixels + window.innerHeight/2
 
     projectTags.forEach(project => {
         const topProject = project.offsetTop
@@ -19,25 +20,64 @@ document.addEventListener("scroll", function(){
 
         const parAmount = distToSect * speed * 0.5
     
-        title.style.transform = `translate(0, ${parAmount * -1}px)`
+        // NOTE: THE VERTICAL TRANSLATE CODE WILL NOT WORK IF YOU EVER WANT TO PARRALAX THE THINGS IN X! 
+        //YOU'RE GONNA HAVE TO REDO IT 
+        title.style.transform = `translateY(${parAmount * -1}px)`
         
     })
 
     const record = document.querySelector(".record img")
-    let pixels = window.pageYOffset
     let rotation = pixels / 5
    // console.log(pixels)
     record.style.transform = `rotate(${rotation}deg)`
 
 })
 
+// on project hovers, translate the titles up by 10px 
 
+projectTags.forEach(project => {
+    const title = project.querySelector("div.project-title")
+    let translateString
+    const tile = project.querySelector(".tile-info a")
 
+    //we have to do these transforms here instead of with classes
+    //since theyre JS parallaxed elements 
 
+    tile.addEventListener("mouseover", () => {
 
+        //  NOTE: THIS CODE WILL NOT WORK IF YOU EVER WANT TO PARRALAX THE THINGS IN X! 
+        //YOU'RE GONNA HAVE TO REDO IT 
 
+        translateString = title.style.transform //this outputs a full property
+        //get the number out of the property name 
+        let commaNum = translateString.indexOf("(") + 1
+        let inNum = translateString.substring(commaNum)
+        inAmount = parseFloat(inNum)
+        //inAmount = parseFloat(translateString.replace(/[^\d.]/g, ''))
 
+        //curAmount = window.getComputedStyle(title).getPropertyValue('transform');
 
+        //console.log(commaNum, bracketNum)
+        console.log("In" + translateString)
+        console.log("NuminNum  " + inNum)
+        console.log("In" + inAmount)
+
+        if( inAmount >= 0){
+            title.style.transform = `translateY(${-10}px)`
+        } 
+        if (inAmount < 0){
+            title.style.transform = `translateY(${(inAmount -10)}px)`
+        }
+        
+    })
+
+    tile.addEventListener('mouseout', () => {
+
+        console.log("out" + inAmount)
+        title.style.transform = `translateY(${inAmount}px)`
+    })
+    
+})
 
 
 
