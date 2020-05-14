@@ -276,6 +276,7 @@ img.project-main {
 
 
 
+
 .back-next{
     width:100%;
     margin-bottom: 50px;
@@ -291,13 +292,27 @@ img.project-main {
 }
 
 
+.back-next .text-container{
+    position: relative;
+    max-width: 150px;
+    overflow:hidden;
+}
+
+.back-next .next .text-container{
+    text-align: end;
+}
+
+
 .back-next  span{
-    display:block;
+    display:inline;
     font-size: 14px;
     margin-bottom: 10px;
     text-transform: uppercase;
-}
+    width:fit-content;
 
+    letter-spacing: 1.5px;
+    
+}
 
 
 .back-next .prev-title, .back-next .next-title{
@@ -305,7 +320,49 @@ img.project-main {
     font-weight: 600;
     margin-bottom: 10px;
     text-transform: none;
+
+    letter-spacing: normal;
 }
+
+.previous .arrow-container {
+    width: 150px;
+    display:inline;
+    position: absolute;
+    top:7px;
+    margin-left: 8px;
+    padding-left: 2px;
+
+    z-index: 4;
+    background-color: #fff;
+
+    transition: transform 0.3s ease;
+}
+
+.next .arrow-container{
+    width: 150px;
+    display:inline;
+    position: absolute;
+    top:7px;
+    left: -110%;
+
+    z-index: 4;
+
+    background-color: #fff;
+    
+    transition: transform 0.3s ease;
+}
+
+
+
+.back-next .previous a:hover .arrow-container{
+    transform:translateX(-119px)
+}
+
+.back-next .next a:hover .arrow-container{
+    transform:translateX(98px)
+}
+
+
 
 
 
