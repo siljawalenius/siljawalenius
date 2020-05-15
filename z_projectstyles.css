@@ -40,6 +40,14 @@ div.project-container{
 }
 
 
+.project-page-header.pink .svg .wave path{
+    stroke: var(--pink);
+}
+
+.project-page-header.green .svg .wave path{
+    stroke: var(--green);
+}
+
 
 .main-img{
     margin-top: 60px;
@@ -59,6 +67,10 @@ div.project-container{
 
 .main-img.yellow{
     background-color: var(--yellow);
+}
+
+.main-img.pink{
+    background-color: var(--pink);
 }
 
 img.project-main {
@@ -206,7 +218,7 @@ img.project-main {
     width:100%;
     height:60vh;
 
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     background-color:var(--yellow);
 }
@@ -228,6 +240,11 @@ img.project-main {
 
 }
 
+.half-img-test.payinterns .content{
+    align-items:center;
+    justify-content:center;
+}
+
 
 
 
@@ -237,6 +254,11 @@ img.project-main {
 
     width:40%;
 }
+
+.half-img-text.payinterns .half-width-img{
+    background-color:transparent;
+}
+
 
 .half-width-img img{
     width:100%;
@@ -280,8 +302,18 @@ img.project-main {
 .back-next{
     width:100%;
     margin-bottom: 50px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
+
+.back-next.both{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
+
 
 .back-next.right-only{
     display:flex;
@@ -291,15 +323,31 @@ img.project-main {
     align-content:center;
 }
 
+.back-next .next{
+    text-align:end;
+}
+
 
 .back-next .text-container{
     position: relative;
-    max-width: 150px;
+    width: 150px;
     overflow:hidden;
 }
 
 .back-next .next .text-container{
     text-align: end;
+}
+
+.text-container.datalabs{
+    width: 160px;
+}
+
+.text-container.mflabs{
+    width: 140px;
+}
+
+.text-container.payinterns{
+    width: 170px;
 }
 
 
@@ -338,6 +386,8 @@ img.project-main {
     transition: transform 0.3s ease;
 }
 
+
+
 .next .arrow-container{
     width: 150px;
     display:inline;
@@ -352,18 +402,53 @@ img.project-main {
     transition: transform 0.3s ease;
 }
 
+.previous .arrow-container.datalabs{
+    left: 75%;
+}
 
+.next .arrow-container.datalabs{
+    left:-80%;
+}
 
-.back-next .previous a:hover .arrow-container{
+.next .arrow-container.payinterns{
+    left:-84%;
+}
+
+.next .arrow-container.mflabs{
+    left: -78%;
+}
+
+.previous a:hover .arrow-container{
     transform:translateX(-119px)
 }
+
+.previous a:hover .arrow-container.superhi{
+    transform: translateX(-67%);
+}
+
+.previous a:hover .arrow-container.mflabs{
+    transform: translateX(-65%);
+}
+.previous a:hover .arrow-container.payinterns{
+    transform: translateX(-87%);
+}
+
 
 .back-next .next a:hover .arrow-container{
     transform:translateX(98px)
 }
 
+.back-next .next a:hover .arrow-container.datalabs{
+    transform: translateX(80%);
+}
 
+.next a:hover .arrow-container.payinterns{
+    transform: translateX(84%);
+}
 
+.next a:hover .arrow-container.mflabs{
+    transform: translateX(66%);
+}
 
 
 
