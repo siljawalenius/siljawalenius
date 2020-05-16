@@ -354,16 +354,14 @@ img.project-main {
 .back-next  span{
     display:inline;
     font-size: 14px;
-    margin-bottom: 10px;
     text-transform: uppercase;
-    width:fit-content;
 
     letter-spacing: 1.5px;
     
 }
 
 
-.back-next .prev-title, .back-next .next-title{
+.back-next .title{
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -373,8 +371,8 @@ img.project-main {
 }
 
 .previous .arrow-container {
-    width: 150px;
-    display:inline;
+    width:150px;
+    display:inline-block;
     position: absolute;
     top:7px;
     margin-left: 8px;
@@ -389,8 +387,8 @@ img.project-main {
 
 
 .next .arrow-container{
-    width: 150px;
-    display:inline;
+    width:150px;
+    display:inline-block;
     position: absolute;
     top:7px;
     left: -110%;
@@ -417,43 +415,6 @@ img.project-main {
 .next .arrow-container.mflabs{
     left: -78%;
 }
-
-.previous a:hover .arrow-container{
-    transform:translateX(-119px)
-}
-
-.previous a:hover .arrow-container.superhi{
-    transform: translateX(-67%);
-}
-
-.previous a:hover .arrow-container.mflabs{
-    transform: translateX(-65%);
-}
-.previous a:hover .arrow-container.payinterns{
-    transform: translateX(-87%);
-}
-
-
-.back-next .next a:hover .arrow-container{
-    transform:translateX(98px)
-}
-
-.back-next .next a:hover .arrow-container.datalabs{
-    transform: translateX(80%);
-}
-
-.next a:hover .arrow-container.payinterns{
-    transform: translateX(84%);
-}
-
-.next a:hover .arrow-container.mflabs{
-    transform: translateX(66%);
-}
-
-
-
-
-
 
 
 

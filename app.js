@@ -1,14 +1,17 @@
 //app is the file i use to work with p5 and draggability
+//only applied on index
 
-const lastSection = document.querySelector("section.contact")
-//
+
+  const contactSection = document.querySelector("section.contact")
+
+
 
 function setup(){
   
     let cnvas = createCanvas(450, 450)
     // note: no idea why my hexagon is working without this... but it does
-    lastSection.appendChild(canvas)
-    console.log(lastSection)
+    contactSection.appendChild(canvas)
+    //console.log(lastSection)
     
 }
 
@@ -32,8 +35,7 @@ function polygon(x, y, radius, npoints) {
       vertex(sx, sy);
     }
     endShape(CLOSE);
-  }
-
+}
 
 //dragability 
 
@@ -63,4 +65,6 @@ cardTags.forEach(card => {
   })
   draggies.push(draggie)
 })
+
+
 

@@ -1,6 +1,45 @@
+const pageBody = document.querySelector("body")
+
+const wiper = document.createElement("div")
+wiper.classList.add("wiper")
+pageBody.appendChild(wiper)
+
+
+
+
+barba.hooks.beforeEnter( ( data ) => {
+    //loadCssJsFile("js", "app.js")
+    //loadCssJsFile("js", "content.js")
+    //loadCssJsFile("css", "z_projectstyles.css")
+    //console.log("hi beforeEnter here")
+    
+    
+    $.getScript("svg.js", () => {
+        console.log("success - svg")
+    })
+    $.getScript("content.js", () =>{
+        console.log("success - content")
+    })
+    $.getScript("app.js", () =>{
+        console.log("success - app")
+    })
+    $(window).scrollTop(0);
+
+    runContent()
+    runApp()
+    animateSvg()
+        
+})
+
+barba.hooks.afterEnter( () => { //add a namespace on this for the index only
+    console.log("after enter")
+    
+   animateSvg()
+})
+
+
 
 barba.use(barbaPrefetch)
-
 barba.init({
     debug: true,
     transitions:[
@@ -10,18 +49,22 @@ barba.init({
                 return new Promise(resolve => {
                     const timeline = gsap.timeline({
                         onComplete(){
+                            current.container.remove()
                             resolve()
                         }
                     })
 
-                    const nav = current.container.querySelector("div.sidebar")
+                    const proj = current.container.querySelector(".project-container")
 
                     timeline 
-                        .to(nav, {opacity:0})
+                    .set(wiper, {x:"-100%"})
+                        .to(proj, {opacity:0.25, x: 700}, 0)
+                        .to(wiper, {x:0})
 
                 })
 
             },
+            
             enter({current, next, trigger}){
                 return new Promise(resolve=>{
                     const timeline = gsap.timeline({
@@ -30,16 +73,20 @@ barba.init({
                         }
                     })
 
-                    const navigation = next.container.querySelector("div.sidebar")
+                    
+                    const proj = next.container.querySelector(".project-container")
 
                     timeline 
-                        .set(nav, {opacity:0})
-                        .to(nav, {opacity:1})
+                        
+                        .set(proj, {opacity:0.25, x:-700})
+                        .to(proj, {opacity:1, x:0}, 0)
+                        .to(wiper, {x:"100%"}, 1)
 
                 })
 
             }
         }
     ],
-    views:[]
+    views:[],
+
 })
