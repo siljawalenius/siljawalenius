@@ -23,19 +23,19 @@ barba.hooks.beforeEnter( ( data ) => {
     $.getScript("app.js", () =>{
         console.log("success - app")
     })
-    $(window).scrollTop(0);
 
+    $(window).scrollTop(0);
     runContent()
     runApp()
-    animateSvg()
+    
         
 })
 
-barba.hooks.afterEnter( () => { //add a namespace on this for the index only
-    console.log("after enter")
+//barba.hooks.afterEnter( () => { //add a namespace on this for the index only
+   // console.log("after enter")
     
-   animateSvg()
-})
+   //animateSvg()
+//})
 
 
 
@@ -72,7 +72,8 @@ barba.init({
                             resolve()
                         }
                     })
-
+                    animateSvg()
+                    //runApp()
                     
                     const proj = next.container.querySelector(".project-container")
 
