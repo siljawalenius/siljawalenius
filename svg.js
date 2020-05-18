@@ -1,18 +1,16 @@
+     //setting a blank array of points
+    //all of these vars are declared in transitionsBaby, to avoid them being double/triple declared
+    xPoints = [] 
 
-    //console.log("animating svg...")
 
-    //setting a blank array of points
-
-    
-    xPoints = []
-    xPoints.length = 0
     //adding points to the array
     for(let i = 0; i < 1300; i++){
         xPoints.push(i)
     }
-    //set initial time to 0
-    
+
+    //set initial time to 0 - also declared in transitionsBaby
     t = 0
+    console.log("t: " + t)
     //purpose: making the wave move
     function animateBig(){
         
@@ -51,7 +49,6 @@
 
     
     qs = []
-    qs.length = 0
     for(let i = 0; i<170; i++){
         qs.push(i)
     }
@@ -83,6 +80,7 @@
 
         //get the animation frame 
         requestAnimationFrame(animateSmall)
+
     }
 
 //animateSmall()
@@ -105,7 +103,14 @@
         let nameY = name.getBoundingClientRect().bottom
         let nameYTop = name.getBoundingClientRect().top
         let nameW = name.getBoundingClientRect().width
-        console.log(nameY, nameX)
+        
+
+        nameWave.style.top = window.pageYOffset + nameY + `px`
+        nameWave.style.left = nameX + `px`
+        nameWave.style.width = nameW - 6 + `px`
+
+        pronounceText.style.top = nameYTop - 50 + `px`
+        pronounceText.style.left = nameX - (nameW /2.5) + `px`
 
         if (nameY === 0 || nameX === 0){
             nameWave.style.top = `380px`
@@ -114,15 +119,7 @@
 
             pronounceText.style.top = `270px`
             pronounceText.style.left = `357.43px`
-        } else {
-            nameWave.style.top = nameY + `px`
-            nameWave.style.left = nameX + `px`
-            nameWave.style.width = nameW - 6 + `px`
-
-            pronounceText.style.top = nameYTop - 50 + `px`
-            pronounceText.style.left = nameX - (nameW /2.5) + `px`
-
-        }
+        } 
 
         name.addEventListener("mouseover", () =>{
             pronounceText.classList.add("visible")

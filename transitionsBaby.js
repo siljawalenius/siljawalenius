@@ -3,6 +3,7 @@ const wiper = document.createElement("div")
 wiper.classList.add("wiper")
 pageBody.appendChild(wiper)
 
+//declaring all global vars here to avoid them being double declared
 let xPoints, cardTags, t, cardContainer, draggies, cardArray, qs, contactSection
 
 
