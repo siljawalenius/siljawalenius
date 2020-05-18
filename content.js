@@ -1,9 +1,7 @@
-const runContent = () => {
-    
-    const bodyTag = document.querySelector("body")
+runContent = () => {
     const projectTags = document.querySelectorAll("section.projects div.project-container")
 
-    console.log("content is here")
+   // console.log("content is here")
     let easing = t => 1-(--t)*t*t*t //taken from github 
 
 
@@ -183,4 +181,5 @@ const runContent = () => {
     startSlots(longNouns, longWord)
 
 }
-runContent()
+
+

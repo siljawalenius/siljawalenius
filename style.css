@@ -309,6 +309,7 @@ div.tag-arrow{
 	justify-content:center;
 }
 
+
 div.svg.wave-small{
 	height:20px;
 	width:120px;
@@ -329,13 +330,20 @@ svg.wave.wave-name{
 	stroke-width:7px;
 }
 
+
+div.name-wave{
+	top:380px;
+	left:398.7px;
+	width:103.25px;
+}
+
 .pronounce{
 	color:var(--green);
 	font-weight: 600;
 
 	position:absolute;
-	top:0;
-	left:0;
+	top:270px;
+	left:357.43px;
 	opacity:0;
 
 	transition:all 0.3s ease;
@@ -833,7 +841,7 @@ svg.wave-contact{
 	position:fixed;
 	top:0;
 	left:0;
-	background-color:#000000;
+	background-color:var(--blue);
 	width:100vw;
 	height:100vh;
 
@@ -1272,6 +1280,10 @@ img.project-main {
 .next .arrow-container.mflabs{
     left: -78%;
 }
+.next .arrow-container.superhi{
+    left: -75%;
+}
+
 
 
 

@@ -1,20 +1,21 @@
 
-let animateSvg = () =>{
-    console.log("animating svg...")
+    //console.log("animating svg...")
 
     //setting a blank array of points
-    let xPoints = []
 
+    
+    xPoints = []
+    xPoints.length = 0
     //adding points to the array
     for(let i = 0; i < 1300; i++){
         xPoints.push(i)
     }
-
     //set initial time to 0
-    let t = 0
-
+    
+    t = 0
     //purpose: making the wave move
     function animateBig(){
+        
         //map each point to a specific place using sin waves
         let points = xPoints.map(x =>{
 
@@ -42,14 +43,15 @@ let animateSvg = () =>{
         //get the animation frame 
         requestAnimationFrame(animateBig)
     }
-    //run function on load
-    animateBig()
+  
 
 
 
 //small wave (for name wave and other accents)
 
-    let qs = []
+    
+    qs = []
+    qs.length = 0
     for(let i = 0; i<170; i++){
         qs.push(i)
     }
@@ -83,47 +85,57 @@ let animateSvg = () =>{
         requestAnimationFrame(animateSmall)
     }
 
-animateSmall()
+//animateSmall()
 
 
 //positioning the small wave under my name 
 //positioning the "pronounce" text over my name
 
-    let name = document.querySelector("span.name")
+    
 
-    let nameWave = document.querySelector('div.name-wave')
-    let pronounceText = document.querySelector('span.pronounce')
+    placeElements = () => {
 
-    const placeElements = () => {
+        let name = document.querySelector("span.name")
+
+        let nameWave = document.querySelector('div.name-wave')
+        let pronounceText = document.querySelector('span.pronounce')
+
+
         let nameX = name.getBoundingClientRect().left
         let nameY = name.getBoundingClientRect().bottom
         let nameYTop = name.getBoundingClientRect().top
         let nameW = name.getBoundingClientRect().width
+        console.log(nameY, nameX)
 
+        if (nameY === 0 || nameX === 0){
+            nameWave.style.top = `380px`
+            nameWave.style.left = `398.7px`
+            nameWave.style.width = `103.25px`
 
-        nameWave.style.top = nameY + `px`
-        nameWave.style.left = nameX + `px`
-        nameWave.style.width = nameW - 6 + `px`
+            pronounceText.style.top = `270px`
+            pronounceText.style.left = `357.43px`
+        } else {
+            nameWave.style.top = nameY + `px`
+            nameWave.style.left = nameX + `px`
+            nameWave.style.width = nameW - 6 + `px`
 
-        pronounceText.style.top = nameYTop - 50 + `px`
-        pronounceText.style.left = nameX - (nameW /2.5) + `px`
+            pronounceText.style.top = nameYTop - 50 + `px`
+            pronounceText.style.left = nameX - (nameW /2.5) + `px`
+
+        }
+
+        name.addEventListener("mouseover", () =>{
+            pronounceText.classList.add("visible")
+        })
+        name.addEventListener('mouseout', () => {
+           pronounceText.classList.remove("visible")
+        })
+    
+        window.addEventListener("resize", () =>{
+            placeElements()
+        })
+
     }
 
-    console.log("elements placed")
-    placeElements()
-
-
-    name.addEventListener("mouseover", () =>{
-        pronounceText.classList.add("visible")
-    })
     
-    name.addEventListener('mouseout', () => {
-        pronounceText.classList.remove("visible")
-    })
     
-    window.addEventListener("resize", () =>{
-        placeElements()
-    
-    })
-}
-animateSvg()
