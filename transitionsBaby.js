@@ -172,6 +172,16 @@ barba.init({
                     animateBig()
                     animateSmall()
                     placeElements()
+
+                    window.addEventListener("resize", () =>{
+                        placeElements()
+                    })
+                    document.querySelector("span.name").addEventListener("mouseover", () =>{
+                        document.querySelector('span.pronounce').classList.add("visible")
+                    })
+                    document.querySelector("span.name").addEventListener('mouseout', () => {
+                        document.querySelector('span.pronounce').classList.remove("visible")
+                    })
                 })
                 $.getScript("content.js", () =>{
                     //console.log("success - content")
@@ -205,9 +215,20 @@ barba.init({
                 $(window).scrollTop(0);
                 
             }
+        },{
+            namespace: "sketchbook",
+            beforeEnter(data){
+                console.log('project:beforeEnter');
+                $.getScript("svg.js", () => {
+                    console.log("success - svg")
+                    animateBig()
+                })
+                $.getScript("contentful.js", () => {
+                    
+                })
+                $(window).scrollTop(0);
         }
-    ],
-
+    }]
 })
 
 

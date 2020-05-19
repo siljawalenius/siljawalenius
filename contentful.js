@@ -33,8 +33,6 @@ const grabData = function (){
 //run grabData on load
 grabData().then(data => {
   //in here, do something with the returned data
-  console.log(data.length)
-
   data.forEach(item =>{
     let img = document.createElement('img') //create the image element
     img.src = item.pageImg //add image source
@@ -45,6 +43,4 @@ grabData().then(data => {
     container.appendChild(div)
     console.log(div)
   })
-
-  console.log(item)
 })

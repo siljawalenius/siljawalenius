@@ -127,19 +127,9 @@
             pronounceText.style.top = `270px`
             pronounceText.style.left = `357.43px`
         } 
-
-        name.addEventListener("mouseover", () =>{
-            pronounceText.classList.add("visible")
-        })
-        name.addEventListener('mouseout', () => {
-           pronounceText.classList.remove("visible")
-        })
     
-        //window.addEventListener("resize", () =>{
-         //   placeElements()
-        //})
 
     }
+        
 
-    
     
