@@ -7,6 +7,7 @@ pageBody.appendChild(wiper)
 let xPoints, cardTags, t, cardContainer, draggies, cardArray, qs, contactSection
 
 
+
 //barba.hooks.beforeEnter( ( data ) => {
     //loadCssJsFile("js", "app.js")
     //loadCssJsFile("js", "content.js")
@@ -35,6 +36,7 @@ const doCleanup = (globalVars) => {
     })
 }
 
+const functionWasRun = false;
 
 
 barba.use(barbaPrefetch)
@@ -42,7 +44,10 @@ barba.init({
     debug: true,
     transitions:[
         {
-            name:"leftSwipe", 
+            name:"rightSwipe", 
+            custom({current,next,trigger}){
+                return (trigger.classList && trigger.classList.contains("right")) || trigger === "right"
+            }, 
             leave({current, next, trigger}){
                 return new Promise(resolve => {
                     const timeline = gsap.timeline({
@@ -53,6 +58,18 @@ barba.init({
                     })
 
                     const proj = current.container.querySelector(".project-container")
+
+                    if (trigger.classList.contains("blue")){
+                        wiper.style.backgroundColor = "var(--blue)"
+                    } else if (trigger.classList.contains("pink")){
+                        wiper.style.backgroundColor = "var(--pink)"
+                    } else if (trigger.classList.contains("green")){
+                        wiper.style.backgroundColor = "var(--green)"
+                    } else if (trigger.classList.contains("yellow")){
+                        wiper.style.backgroundColor = "var(--yellow)"
+                    } else{
+                        wiper.style.backgroundColor = "var(--lightgrey)"
+                    }
 
                     timeline 
                     .set(wiper, {x:"-100%"})
@@ -83,21 +100,71 @@ barba.init({
                 })
 
             }
+        },{
+            name:"leftSwipe",
+            leave({current, next, trigger}){
+                return new Promise(resolve => {
+                    const timeline = gsap.timeline({
+                        onComplete(){
+                            current.container.remove()
+                            resolve()
+                        }
+                    })
+                    
+                    const proj = current.container.querySelector(".project-container")
+
+                    if (trigger.classList.contains("blue")){
+                        wiper.style.backgroundColor = "var(--blue)"
+                    } else if (trigger.classList.contains("pink")){
+                        wiper.style.backgroundColor = "var(--pink)"
+                    } else if (trigger.classList.contains("green")){
+                        wiper.style.backgroundColor = "var(--green)"
+                    } else if (trigger.classList.contains("yellow")){
+                        wiper.style.backgroundColor = "var(--yellow)"
+                    } else{
+                        wiper.style.backgroundColor = "var(--lightgrey)"
+                    }
+
+                    timeline 
+                    .set(wiper, {x:"100%"})
+                        .to(wiper, {x:0})
+
+                })
+
+            },
+            
+            enter({current, next, trigger}){
+                return new Promise(resolve=>{
+                    const timeline = gsap.timeline({
+                        onComplete(){
+                            resolve()
+                        }
+                    })
+                    
+
+
+                    const proj = next.container.querySelector(".project-container")
+
+                    timeline 
+                        
+                        .set(proj, {opacity:0.25, x:-700})
+                        .to(proj, {opacity:1, x:0}, 0)
+                        .to(wiper, {x:"-100%"}, 1)
+
+                })
+
+            }
+
         }
+        
     ],
     views:[{
             namespace: "index", 
             beforeEnter(data){
 
-                console.log('index:beforeEnter');
-
-                $.getScript("content.js", () =>{
-                    //console.log("success - content")
-                    runContent()
+                $.getScript("p5.min.js", () =>{
                 })
                 $.getScript("app.js", () =>{
-                    //console.log("success - app")
-                    //runApp()
                 })
 
                 $.getScript("svg.js", () => {
@@ -105,13 +172,22 @@ barba.init({
                     animateBig()
                     animateSmall()
                     placeElements()
-                    
+                })
+                $.getScript("content.js", () =>{
+                    //console.log("success - content")
+                    runContent()
                 })
                
                 $(window).scrollTop(0);
 
-                
-            }  
+            },
+            afterLeave(data){
+                $.getScript("svg.js", () => {
+                    window.cancelAnimationFrame(animateBig)
+                    window.cancelAnimationFrame(animateSmall)
+
+                })
+            }
             
         },{
             namespace: "project",
@@ -121,6 +197,11 @@ barba.init({
                     console.log("success - svg")
                     animateBig()
                 })
+                $.getScript("projectPages.js", () => {
+                    console.log("success - projectPages")
+                })
+
+
                 $(window).scrollTop(0);
                 
             }

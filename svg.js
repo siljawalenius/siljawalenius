@@ -10,7 +10,8 @@
 
     //set initial time to 0 - also declared in transitionsBaby
     t = 0
-    console.log("t: " + t)
+
+
     //purpose: making the wave move
     function animateBig(){
         
@@ -40,19 +41,21 @@
 
         //get the animation frame 
         requestAnimationFrame(animateBig)
+
+        
     }
   
 
 
 
 //small wave (for name wave and other accents)
-
     
     qs = []
     for(let i = 0; i<170; i++){
         qs.push(i)
     }
 
+    //PURPOSE: moves small wave
     function animateSmall(){
         //map each point to a specific place using sin waves
         let points = qs.map(x =>{
@@ -84,6 +87,10 @@
     }
 
 //animateSmall()
+
+
+
+
 
 
 //positioning the small wave under my name 
@@ -128,9 +135,9 @@
            pronounceText.classList.remove("visible")
         })
     
-        window.addEventListener("resize", () =>{
-            placeElements()
-        })
+        //window.addEventListener("resize", () =>{
+         //   placeElements()
+        //})
 
     }
 
