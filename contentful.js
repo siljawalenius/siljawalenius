@@ -1,9 +1,7 @@
 const spaceID = 'asxeplbk94nd';
 const envID = 'master';
 const accessToken = '2-H3aef0a1zHuL3uEDaeTeboTc9iJv4NFkFxZZ3SRsQ';
-
 const url = `https://cdn.contentful.com/spaces/${spaceID}/environments/${envID}/entries?access_token=${accessToken}`
-
 const container = document.querySelector('div.container')
 
 //console.log(url)
@@ -41,6 +39,6 @@ grabData().then(data => {
     div.classList.add("page") //add a page class
     div.appendChild(img) 
     container.appendChild(div)
-    console.log(div)
+    //console.log(div)
   })
 })

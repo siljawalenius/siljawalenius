@@ -12,7 +12,6 @@ nextTags = document.querySelectorAll(".back-next .next")
 //declaring all global vars here to avoid them being double declared
 let xPoints,
   cardTags,
-  t,
   cardContainer,
   draggies,
   cardArray,
@@ -134,6 +133,8 @@ barba.init({
       namespace: "index",
       beforeEnter(data) {
 
+        destroyAnimations()
+
         runContent()
         runApp()
         runBigWaves()
@@ -143,6 +144,7 @@ barba.init({
         window.addEventListener("resize", () => {
           placeElements();
         });
+
         document
           .querySelector("span.name")
           .addEventListener("mouseover", () => {
@@ -156,7 +158,11 @@ barba.init({
         $(window).scrollTop(0);
       },
       afterLeave(data) {
-        stopAllWaves()
+        destroyAnimations()
+
+        window.removeEventListener("resize", () => {
+            placeElements();
+          });
       },
     },
     {
@@ -175,7 +181,7 @@ barba.init({
       namespace: "sketchbook",
       beforeEnter(data) {
         console.log("project:beforeEnter");
-          animateBig();
+        runBigWaves();
         $.getScript("contentful.js", () => {});
         $(window).scrollTop(0);
       },

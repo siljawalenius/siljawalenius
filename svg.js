@@ -10,7 +10,7 @@ function runBigWaves() {
   }
 
   //set initial time to 0 - also declared in transitionsBaby
-  t = 0;
+  let t = 0;
 
   //purpose: making the wave move
   function animateBig() {
@@ -35,7 +35,7 @@ function runBigWaves() {
     let waves = document.querySelectorAll("path.big-wave");
 
     waves.forEach((wave) => {
-      wave.setAttribute("d", path);
+      wave.setAttribute("d", path)
     });
 
     //increasing time by 0.5
@@ -44,78 +44,71 @@ function runBigWaves() {
     //get the animation frame
     requestAnimationFrame(animateBig);
   }
-  animateBig()
+  animateBig();
 }
 
-destroyAnimations = () => {
-  window.cancelAnimationFrame(animateBig);
-  window.cancelAnimationFrame(animateSmall);
+runBigWaves();
 
-  document.querySelectorAll("path.big-wave").forEach((wave) => {
-    wave.removeAttribute("d", path);
-  });
 
-  document.querySelectorAll("path.small-wave").forEach((wave) => {
-    wave.removeAttribute("d", path);
-  });
-};
+
+
 
 //small wave (for name wave and other accents)
 
+function runSmallWaves() {
+  qs = [];
+  for (let i = 0; i < 170; i++) {
+    qs.push(i);
+  }
 
-function runSmallWaves(){
-    qs = [];
-for (let i = 0; i < 170; i++) {
-  qs.push(i);
+  let t = 0;
+
+  //PURPOSE: moves small wave
+  function animateSmall() {
+    //map each point to a specific place using sin waves
+    let points = qs.map((x) => {
+      // y = height from top + Math.sin(x/frequency) + amplitude
+      let y = 10 + Math.sin((x + t) / 6) * 6;
+      return [x, y];
+      console.log(y)
+    });
+
+    //creates the text array of points we need
+    let path =
+      "M" +
+      points
+        .map((p) => {
+          return p[0] + "," + p[1];
+        })
+        .join(" L");
+
+    //sets the attribute on the path element
+    let smallWaves = document.querySelectorAll("path.small-wave");
+
+    smallWaves.forEach((wave) => {
+      wave.setAttribute("d", path)
+    });
+
+    //increasing time by 0.005
+    t += 0.005;
+
+    //get the animation frame
+    requestAnimationFrame(animateSmall);
+  }
+  animateSmall();
 }
 
-//PURPOSE: moves small wave
-function animateSmall() {
-  //map each point to a specific place using sin waves
-  let points = qs.map((x) => {
-    // y = height from top + Math.sin(x/frequency) + amplitude
-    let y = 10 + Math.sin((x + t) / 6) * 6;
-
-    return [x, y];
-  });
-
-  //creates the text array of points we need
-  let path =
-    "M" +
-    points
-      .map((p) => {
-        return p[0] + "," + p[1];
-      })
-      .join(" L");
-
-  //sets the attribute on the path element
-  let smallWaves = document.querySelectorAll("path.small-wave");
-
-  smallWaves.forEach((wave) => {
-    wave.setAttribute("d", path);
-
-    //console.log("d" + wave.getAttribute("d"));
-  });
-
-  //increasing time by 0.5
-  t += 0.005;
-
-  //get the animation frame
-  requestAnimationFrame(animateSmall);
-}
-animateSmall()
-
-}
+runSmallWaves()
 
 
-//animateSmall()
 
-stopAllWaves = () => {
-  let smallWaves = document.querySelectorAll("path.small-wave");
-  smallWaves.forEach((wave) => {
-    console.log("before remove: " + wave.getAttribute("d"));
+destroyAnimations = () => {
+  document.querySelectorAll("path.big-wave").forEach((wave) => {
     wave.removeAttribute("d");
-    console.log("after remove: " + wave.getAttribute("d"));
+  });
+
+  document.querySelectorAll("path.small-wave").forEach((wave) => {
+    wave.removeAttribute("d");
   });
 };
 
