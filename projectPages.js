@@ -1,7 +1,7 @@
 
 //use forEach on each section to grab titles and arrows
 
-
+console.log('hello')
 moveTags = (tags) =>{
 
     tags.forEach(tag => {
@@ -43,4 +43,7 @@ moveTags = (tags) =>{
     })
 
 }
-
+let prevTags = document.querySelectorAll(".back-next .previous")
+let nextTags = document.querySelectorAll(".back-next .next")
+moveTags(prevTags)
+moveTags(nextTags)

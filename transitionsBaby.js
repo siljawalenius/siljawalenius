@@ -164,8 +164,8 @@ barba.init({
       beforeEnter(data) {
         console.log("project:beforeEnter");
         runBigWaves();
-        const prevTags = document.querySelectorAll(".back-next .previous")
-        const nextTags = document.querySelectorAll(".back-next .next")
+        let prevTags = document.querySelectorAll(".back-next .previous")
+        let nextTags = document.querySelectorAll(".back-next .next")
         moveTags(prevTags)
         moveTags(nextTags)
         $(window).scrollTop(0);
