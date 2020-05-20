@@ -38,13 +38,28 @@
         
         //increasing time by 0.5
         t +=0.5
-
+        
         //get the animation frame 
         requestAnimationFrame(animateBig)
-
-        
     }
   
+
+    destroyAnimations = ()=>{
+        qs = null
+        xPoints = null
+        t = null
+
+        window.cancelAnimationFrame(animateBig)
+        window.cancelAnimationFrame(animateSmall)
+
+        document.querySelectorAll("path.big-wave").forEach(wave =>{
+            wave.removeAttribute("d", path)
+        })
+
+        document.querySelectorAll("path.small-wave").forEach(wave =>{
+            wave.removeAttribute("d", path)
+        })
+    }
 
 
 
@@ -73,14 +88,18 @@
 
         //sets the attribute on the path element
         let smallWaves = document.querySelectorAll("path.small-wave")
-        
+
+       
         smallWaves.forEach(wave =>{
             wave.setAttribute("d", path)
+
+           console.log("d" + wave.getAttribute('d'))
         })
         
         //increasing time by 0.5
         t +=0.005
 
+        
         //get the animation frame 
         requestAnimationFrame(animateSmall)
 
@@ -88,7 +107,15 @@
 
 //animateSmall()
 
-
+stopAllWaves = () =>{
+    let smallWaves = document.querySelectorAll("path.small-wave")
+    smallWaves.forEach(wave =>{
+        console.log ("before remove: " + wave.getAttribute('d'))
+        wave.removeAttribute('d')
+        console.log ("after remove: " +wave.getAttribute('d'))
+    })
+    
+}
 
 
 

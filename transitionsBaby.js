@@ -41,7 +41,7 @@ const functionWasRun = false;
 
 barba.use(barbaPrefetch)
 barba.init({
-    debug: true,
+    debug: false,
     transitions:[
         {
             name:"rightSwipe", 
@@ -161,6 +161,7 @@ barba.init({
     views:[{
             namespace: "index", 
             beforeEnter(data){
+                
 
                 $.getScript("p5.min.js", () =>{
                 })
@@ -172,6 +173,7 @@ barba.init({
                     animateBig()
                     animateSmall()
                     placeElements()
+                    stopAllWaves()
 
                     window.addEventListener("resize", () =>{
                         placeElements()
@@ -193,9 +195,7 @@ barba.init({
             },
             afterLeave(data){
                 $.getScript("svg.js", () => {
-                    window.cancelAnimationFrame(animateBig)
-                    window.cancelAnimationFrame(animateSmall)
-
+                    stopAllWaves()
                 })
             }
             
@@ -204,13 +204,12 @@ barba.init({
             beforeEnter(data){
                 console.log('project:beforeEnter');
                 $.getScript("svg.js", () => {
-                    console.log("success - svg")
+                    //console.log("success - svg")
                     animateBig()
                 })
                 $.getScript("projectPages.js", () => {
-                    console.log("success - projectPages")
+                    //console.log("success - projectPages")
                 })
-
 
                 $(window).scrollTop(0);
                 
