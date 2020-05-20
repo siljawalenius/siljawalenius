@@ -1,5 +1,7 @@
 //setting a blank array of points
 //all of these vars are declared in transitionsBaby, to avoid them being double/triple declared
+let bigAF, smallAF
+let t = 0;
 
 function runBigWaves() {
   xPoints = [];
@@ -10,7 +12,7 @@ function runBigWaves() {
   }
 
   //set initial time to 0 - also declared in transitionsBaby
-  let t = 0;
+ 
 
   //purpose: making the wave move
   function animateBig() {
@@ -42,7 +44,8 @@ function runBigWaves() {
     t += 0.5;
 
     //get the animation frame
-    requestAnimationFrame(animateBig);
+    //requestAnimationFrame(animateBig);
+    bigAF = requestAnimationFrame(animateBig)
   }
   animateBig();
 }
@@ -61,7 +64,7 @@ function runSmallWaves() {
     qs.push(i);
   }
 
-  let t = 0;
+
 
   //PURPOSE: moves small wave
   function animateSmall() {
@@ -93,7 +96,8 @@ function runSmallWaves() {
     t += 0.005;
 
     //get the animation frame
-    requestAnimationFrame(animateSmall);
+    smallAF = requestAnimationFrame(animateSmall);
+    
   }
   animateSmall();
 }
@@ -110,6 +114,8 @@ destroyAnimations = () => {
   document.querySelectorAll("path.small-wave").forEach((wave) => {
     wave.removeAttribute("d");
   });
+    cancelAnimationFrame(bigAF)
+    cancelAnimationFrame(smallAF)
 };
 
 //positioning the small wave under my name

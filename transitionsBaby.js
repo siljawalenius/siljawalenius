@@ -3,23 +3,12 @@ const wiper = document.createElement("div");
 wiper.classList.add("wiper");
 pageBody.appendChild(wiper);
 
-
 //grab previous and next div tags
-prevTags = document.querySelectorAll(".back-next .previous")
-nextTags = document.querySelectorAll(".back-next .next")
-
+prevTags = document.querySelectorAll(".back-next .previous");
+nextTags = document.querySelectorAll(".back-next .next");
 
 //declaring all global vars here to avoid them being double declared
-let xPoints,
-  cardTags,
-  cardContainer,
-  draggies,
-  cardArray,
-  qs,
-  contactSection;
-
-
-
+let xPoints, cardTags, cardContainer, draggies, cardArray, qs, contactSection;
 
 const functionWasRun = false;
 
@@ -132,14 +121,13 @@ barba.init({
     {
       namespace: "index",
       beforeEnter(data) {
+        destroyAnimations();
 
-        destroyAnimations()
-
-        runContent()
-        runApp()
-        runBigWaves()
-        runSmallWaves()
-        placeElements()
+        runContent();
+        runApp();
+        runBigWaves();
+        runSmallWaves();
+        placeElements();
 
         window.addEventListener("resize", () => {
           placeElements();
@@ -154,15 +142,14 @@ barba.init({
           document.querySelector("span.pronounce").classList.remove("visible");
         });
 
-
         $(window).scrollTop(0);
       },
       afterLeave(data) {
-        destroyAnimations()
+        destroyAnimations();
 
         window.removeEventListener("resize", () => {
-            placeElements();
-          });
+          placeElements();
+        });
       },
     },
     {
@@ -170,10 +157,10 @@ barba.init({
       beforeEnter(data) {
         console.log("project:beforeEnter");
         runBigWaves();
-        let prevTags = document.querySelectorAll(".back-next .previous")
-        let nextTags = document.querySelectorAll(".back-next .next")
-        moveTags(prevTags)
-        moveTags(nextTags)
+        let prevTags = document.querySelectorAll(".back-next .previous");
+        let nextTags = document.querySelectorAll(".back-next .next");
+        moveTags(prevTags);
+        moveTags(nextTags);
         $(window).scrollTop(0);
       },
     },
