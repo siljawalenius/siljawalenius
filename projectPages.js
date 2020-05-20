@@ -1,9 +1,5 @@
-//grab previous and next div tags
-prevTags = document.querySelectorAll(".back-next .previous")
-nextTags = document.querySelectorAll(".back-next .next")
 
 //use forEach on each section to grab titles and arrows
-
 
 
 moveTags = (tags) =>{
@@ -48,5 +44,3 @@ moveTags = (tags) =>{
 
 }
 
-moveTags(prevTags)
-moveTags(nextTags)

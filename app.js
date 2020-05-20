@@ -3,7 +3,10 @@
   //cardTags, containers are consts
   //draggies is a let
   //card array is a let 
-  cardTags = document.querySelectorAll(".draggable")
+
+  function runApp(){
+
+    cardTags = document.querySelectorAll(".draggable")
   cardContainer = document.querySelector(".card-container")
   draggies = []
   cardArray = []
@@ -31,14 +34,16 @@
   })
 
 
-   contactSection = document.querySelector("section.contact")
+ 
   //console.log(contactSection)
   
 
   //polygon
   function setup(){
+
+    contactSection = document.querySelector("section.contact")
     
-   createCanvas(450, 450)
+   let canvas = createCanvas(450, 450)
     // note: no idea why my hexagon is working without this... but it does
     try{ 
       contactSection.appendChild(canvas)
@@ -72,6 +77,9 @@ function polygon(x, y, radius, npoints) {
     endShape(CLOSE);
 }
 
+
+  }
+  
 
 
 

@@ -1,162 +1,151 @@
-     //setting a blank array of points
-    //all of these vars are declared in transitionsBaby, to avoid them being double/triple declared
-    xPoints = [] 
+//setting a blank array of points
+//all of these vars are declared in transitionsBaby, to avoid them being double/triple declared
 
+function runBigWaves() {
+  xPoints = [];
 
-    //adding points to the array
-    for(let i = 0; i < 1300; i++){
-        xPoints.push(i)
-    }
+  //adding points to the array
+  for (let i = 0; i < 1300; i++) {
+    xPoints.push(i);
+  }
 
-    //set initial time to 0 - also declared in transitionsBaby
-    t = 0
+  //set initial time to 0 - also declared in transitionsBaby
+  t = 0;
 
+  //purpose: making the wave move
+  function animateBig() {
+    //map each point to a specific place using sin waves
+    let points = xPoints.map((x) => {
+      // y = height from top + Math.sin(x/frequency) + amplitude
+      let y = 33 + Math.sin((x + t) / 15) * 15;
 
-    //purpose: making the wave move
-    function animateBig(){
-        
-        //map each point to a specific place using sin waves
-        let points = xPoints.map(x =>{
+      return [x, y];
+    });
 
-            // y = height from top + Math.sin(x/frequency) + amplitude
-            let y = 33 + Math.sin( (x+t) / 15) * 15
-
-            return [x,y]
+    //creates the text array of points we need
+    let path =
+      "M" +
+      points
+        .map((p) => {
+          return p[0] + "," + p[1];
         })
-        
-        //creates the text array of points we need 
-        let path = "M" + points.map(p =>{
-            return p[0] + "," + p[1]
-        }).join(" L")
+        .join(" L");
 
-        //sets the attribute on the path element
-        let waves = document.querySelectorAll("path.big-wave")
-        
-        waves.forEach(wave =>{
-            wave.setAttribute("d", path)
-        })
-        
-        //increasing time by 0.5
-        t +=0.5
-        
-        //get the animation frame 
-        requestAnimationFrame(animateBig)
-    }
-  
+    //sets the attribute on the path element
+    let waves = document.querySelectorAll("path.big-wave");
 
-    destroyAnimations = ()=>{
-        qs = null
-        xPoints = null
-        t = null
+    waves.forEach((wave) => {
+      wave.setAttribute("d", path);
+    });
 
-        window.cancelAnimationFrame(animateBig)
-        window.cancelAnimationFrame(animateSmall)
+    //increasing time by 0.5
+    t += 0.5;
 
-        document.querySelectorAll("path.big-wave").forEach(wave =>{
-            wave.removeAttribute("d", path)
-        })
+    //get the animation frame
+    requestAnimationFrame(animateBig);
+  }
+  animateBig()
+}
 
-        document.querySelectorAll("path.small-wave").forEach(wave =>{
-            wave.removeAttribute("d", path)
-        })
-    }
+destroyAnimations = () => {
+  window.cancelAnimationFrame(animateBig);
+  window.cancelAnimationFrame(animateSmall);
 
+  document.querySelectorAll("path.big-wave").forEach((wave) => {
+    wave.removeAttribute("d", path);
+  });
 
+  document.querySelectorAll("path.small-wave").forEach((wave) => {
+    wave.removeAttribute("d", path);
+  });
+};
 
 //small wave (for name wave and other accents)
-    
-    qs = []
-    for(let i = 0; i<170; i++){
-        qs.push(i)
-    }
 
-    //PURPOSE: moves small wave
-    function animateSmall(){
-        //map each point to a specific place using sin waves
-        let points = qs.map(x =>{
 
-            // y = height from top + Math.sin(x/frequency) + amplitude
-            let y = 10 + Math.sin( (x+t) / 6) * 6
+function runSmallWaves(){
+    qs = [];
+for (let i = 0; i < 170; i++) {
+  qs.push(i);
+}
 
-            return [x,y]
-        })
-        
-        //creates the text array of points we need 
-        let path = "M" + points.map(p =>{
-            return p[0] + "," + p[1]
-        }).join(" L")
+//PURPOSE: moves small wave
+function animateSmall() {
+  //map each point to a specific place using sin waves
+  let points = qs.map((x) => {
+    // y = height from top + Math.sin(x/frequency) + amplitude
+    let y = 10 + Math.sin((x + t) / 6) * 6;
 
-        //sets the attribute on the path element
-        let smallWaves = document.querySelectorAll("path.small-wave")
+    return [x, y];
+  });
 
-       
-        smallWaves.forEach(wave =>{
-            wave.setAttribute("d", path)
+  //creates the text array of points we need
+  let path =
+    "M" +
+    points
+      .map((p) => {
+        return p[0] + "," + p[1];
+      })
+      .join(" L");
 
-           console.log("d" + wave.getAttribute('d'))
-        })
-        
-        //increasing time by 0.5
-        t +=0.005
+  //sets the attribute on the path element
+  let smallWaves = document.querySelectorAll("path.small-wave");
 
-        
-        //get the animation frame 
-        requestAnimationFrame(animateSmall)
+  smallWaves.forEach((wave) => {
+    wave.setAttribute("d", path);
 
-    }
+    //console.log("d" + wave.getAttribute("d"));
+  });
 
-//animateSmall()
+  //increasing time by 0.5
+  t += 0.005;
 
-stopAllWaves = () =>{
-    let smallWaves = document.querySelectorAll("path.small-wave")
-    smallWaves.forEach(wave =>{
-        console.log ("before remove: " + wave.getAttribute('d'))
-        wave.removeAttribute('d')
-        console.log ("after remove: " +wave.getAttribute('d'))
-    })
-    
+  //get the animation frame
+  requestAnimationFrame(animateSmall);
+}
+animateSmall()
+
 }
 
 
+//animateSmall()
 
+stopAllWaves = () => {
+  let smallWaves = document.querySelectorAll("path.small-wave");
+  smallWaves.forEach((wave) => {
+    console.log("before remove: " + wave.getAttribute("d"));
+    wave.removeAttribute("d");
+    console.log("after remove: " + wave.getAttribute("d"));
+  });
+};
 
-//positioning the small wave under my name 
+//positioning the small wave under my name
 //positioning the "pronounce" text over my name
 
-    
+placeElements = () => {
+  let name = document.querySelector("span.name");
 
-    placeElements = () => {
+  let nameWave = document.querySelector("div.name-wave");
+  let pronounceText = document.querySelector("span.pronounce");
 
-        let name = document.querySelector("span.name")
+  let nameX = name.getBoundingClientRect().left;
+  let nameY = name.getBoundingClientRect().bottom;
+  let nameYTop = name.getBoundingClientRect().top;
+  let nameW = name.getBoundingClientRect().width;
 
-        let nameWave = document.querySelector('div.name-wave')
-        let pronounceText = document.querySelector('span.pronounce')
+  nameWave.style.top = window.pageYOffset + nameY + `px`;
+  nameWave.style.left = nameX + `px`;
+  nameWave.style.width = nameW - 6 + `px`;
 
+  pronounceText.style.top = nameYTop - 50 + `px`;
+  pronounceText.style.left = nameX - nameW / 2.5 + `px`;
 
-        let nameX = name.getBoundingClientRect().left
-        let nameY = name.getBoundingClientRect().bottom
-        let nameYTop = name.getBoundingClientRect().top
-        let nameW = name.getBoundingClientRect().width
-        
+  if (nameY === 0 || nameX === 0) {
+    nameWave.style.top = `380px`;
+    nameWave.style.left = `398.7px`;
+    nameWave.style.width = `103.25px`;
 
-        nameWave.style.top = window.pageYOffset + nameY + `px`
-        nameWave.style.left = nameX + `px`
-        nameWave.style.width = nameW - 6 + `px`
-
-        pronounceText.style.top = nameYTop - 50 + `px`
-        pronounceText.style.left = nameX - (nameW /2.5) + `px`
-
-        if (nameY === 0 || nameX === 0){
-            nameWave.style.top = `380px`
-            nameWave.style.left = `398.7px`
-            nameWave.style.width = `103.25px`
-
-            pronounceText.style.top = `270px`
-            pronounceText.style.left = `357.43px`
-        } 
-    
-
-    }
-        
-
-    
+    pronounceText.style.top = `270px`;
+    pronounceText.style.left = `357.43px`;
+  }
+};
