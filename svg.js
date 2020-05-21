@@ -10,10 +10,8 @@ function runBigWaves() {
   for (let i = 0; i < 1300; i++) {
     xPoints.push(i);
   }
-
   //set initial time to 0 - also declared in transitionsBaby
  
-
   //purpose: making the wave move
   function animateBig() {
     //map each point to a specific place using sin waves
@@ -63,8 +61,6 @@ function runSmallWaves() {
   for (let i = 0; i < 170; i++) {
     qs.push(i);
   }
-
-
 
   //PURPOSE: moves small wave
   function animateSmall() {

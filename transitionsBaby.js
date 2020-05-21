@@ -8,9 +8,7 @@ prevTags = document.querySelectorAll(".back-next .previous");
 nextTags = document.querySelectorAll(".back-next .next");
 
 //declaring all global vars here to avoid them being double declared
-let xPoints, cardTags, cardContainer, draggies, cardArray, qs, contactSection;
-
-const functionWasRun = false;
+let xPoints, cardTags, cardContainer, draggies, cardArray, qs;
 
 barba.use(barbaPrefetch);
 barba.init({
@@ -122,12 +120,14 @@ barba.init({
       namespace: "index",
       beforeEnter(data) {
         destroyAnimations();
-
         runContent();
-        runApp();
+        runDraggies();
         runBigWaves();
         runSmallWaves();
         placeElements();
+        isIndex()
+        
+
 
         window.addEventListener("resize", () => {
           placeElements();
@@ -142,7 +142,7 @@ barba.init({
           document.querySelector("span.pronounce").classList.remove("visible");
         });
 
-        $(window).scrollTop(0);
+        window.scroll(0,0)
       },
       afterLeave(data) {
         destroyAnimations();
@@ -155,13 +155,13 @@ barba.init({
     {
       namespace: "project",
       beforeEnter(data) {
-        console.log("project:beforeEnter");
+        //console.log("project:beforeEnter");
         runBigWaves();
         let prevTags = document.querySelectorAll(".back-next .previous");
         let nextTags = document.querySelectorAll(".back-next .next");
         moveTags(prevTags);
         moveTags(nextTags);
-        $(window).scrollTop(0);
+        window.scroll(0,0)
       },
     },
     {
@@ -170,7 +170,7 @@ barba.init({
         console.log("project:beforeEnter");
         runBigWaves();
         $.getScript("contentful.js", () => {});
-        $(window).scrollTop(0);
+        window.scroll(0,0)
       },
     },
   ],

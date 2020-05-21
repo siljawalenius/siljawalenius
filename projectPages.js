@@ -1,7 +1,6 @@
 
 //use forEach on each section to grab titles and arrows
 
-console.log('hello')
 moveTags = (tags) =>{
 
     tags.forEach(tag => {

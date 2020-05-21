@@ -1,72 +1,67 @@
+//dragability
+//cardTags, containers are consts
+//draggies is a let
+//card array is a let
 
-  //dragability 
-  //cardTags, containers are consts
-  //draggies is a let
-  //card array is a let 
+const runDraggies = () => {
+  cardTags = document.querySelectorAll(".draggable");
+  cardContainer = document.querySelector(".card-container");
+  draggies = [];
+  cardArray = [];
 
-  function runApp(){
-
-    cardTags = document.querySelectorAll(".draggable")
-  cardContainer = document.querySelector(".card-container")
-  draggies = []
-  cardArray = []
-  
   // first, we need to center all the cards on the page
-  //then, init draggabilly 
-  
-  cardTags.forEach(card => {
-  
+  //then, init draggabilly
+
+  cardTags.forEach((card) => {
     //creating an array to pull indexes of elements more easily
-    cardArray.push(card)
-    let sectionHeight = cardContainer.getBoundingClientRect().height / 2.5
-  
-    let distFromTop =  sectionHeight + (30 * cardArray.indexOf(card))
+    cardArray.push(card);
+    let sectionHeight = cardContainer.getBoundingClientRect().height / 2.5;
+
+    let distFromTop = sectionHeight + 30 * cardArray.indexOf(card);
     //console.log(cardArray, distFromTop)
-  
-    card.style.left = '50%'
-    card.style.transform = 'translate(-50%, -50%)'
-    card.style.top = distFromTop + `px`
-  
+
+    card.style.left = "50%";
+    card.style.transform = "translate(-50%, -50%)";
+    card.style.top = distFromTop + `px`;
+
     let draggie = new Draggabilly(card, {
-      containment: cardContainer
-    })
-    draggies.push(draggie)
-  })
+      containment: cardContainer,
+    });
+    draggies.push(draggie);
+  });
+};
+
+const isIndex = () => {
+  if (document.querySelector("body").classList.contains("index")) {
+  return true;
+  } else {
+    return false;
+  }
+};
 
 
- 
-  //console.log(contactSection)
-  
+let contactSection = document.querySelector("section.contact");
 
+        
   //polygon
-  function setup(){
+  function setup() {
+    createCanvas(450, 450);
+    contactSection.appendChild(canvas);
+    // console.log(contactSection);
+  }
 
-    contactSection = document.querySelector("section.contact")
-    
-   let canvas = createCanvas(450, 450)
-    // note: no idea why my hexagon is working without this... but it does
-    try{ 
-      contactSection.appendChild(canvas)
-    } catch {
-      console.log("error appending canvas")
-    }
-    
-    //console.log(lastSection)
-    
-}
-
-function draw(){
-    background("var(--pink)")
+  function draw() {
+    background("transparent");
     push();
     noStroke();
     translate(width * 0.5, height * 0.5);
-    fill("#E2EEF1")
+    fill("#E2EEF1");
     rotate(frameCount / -200.0);
     polygon(0, 0, 170, 6);
     pop();
-}
+  }
 
-function polygon(x, y, radius, npoints) {
+  function polygon(x, y, radius, npoints) {
     let angle = TWO_PI / npoints;
     beginShape();
     for (let a = 0; a < TWO_PI; a += angle) {
@@ -75,11 +70,4 @@ function polygon(x, y, radius, npoints) {
       vertex(sx, sy);
     }
     endShape(CLOSE);
-}
-
-
   }
-  
-
-
-

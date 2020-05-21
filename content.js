@@ -180,6 +180,8 @@ runContent = () => {
     startSlots(shortNouns, shortWord)
     startSlots(longNouns, longWord)
 
+    
+
 }
 
 
