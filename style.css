@@ -1294,14 +1294,12 @@ footer.project-footer{
 
     width:100vw;
     background-color: var(--lightgrey);
-    height: 20vh;
+	
 
     display:flex;
     align-items:center;
     align-content:center;
     justify-content:center;
-
-    
 
     z-index: 100;
 }
@@ -1330,7 +1328,8 @@ footer .email{
 
 .footer-intouch{
     font-size: 18px;
-    font-weight:600;
+	font-weight:600;
+	margin-bottom: 30px;
 }
 
 a.footer-mail{

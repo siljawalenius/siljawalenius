@@ -31,8 +31,6 @@ barba.init({
             },
           });
 
-          const proj = current.container.querySelector(".project-container");
-
           if (trigger.classList.contains("blue")) {
             wiper.style.backgroundColor = "var(--blue)";
           } else if (trigger.classList.contains("pink")) {
