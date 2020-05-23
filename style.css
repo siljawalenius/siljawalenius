@@ -1258,7 +1258,7 @@ img.project-main {
     display:inline-block;
     position: absolute;
     top:7px;
-    left: -110%;
+    left: -90%;
 
     z-index: 4;
 
@@ -1268,15 +1268,20 @@ img.project-main {
 }
 
 .previous .arrow-container.datalabs{
-    left: 75%;
+    left: 70%;
 }
 
+
 .next .arrow-container.datalabs{
-    left:-80%;
+    left:-70%;
 }
 
 .next .arrow-container.payinterns{
-    left:-84%;
+    left:-75%;
+}
+
+.next .arrow-container.superhi{
+    left:-75%;
 }
 
 .next .arrow-container.mflabs{
