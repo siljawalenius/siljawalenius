@@ -8,7 +8,10 @@
 		<title>Silja Walenius - SuperHi</title>
 		<link rel="stylesheet" href="/_base.css">
 		<link rel="stylesheet" href="/style.css">
-		<link rel="stylesheet" href="/variables.css">
+    <link rel="stylesheet" href="/variables.css">
+    <link rel="shortcut icon" type="image/png" href="png/favicongreen48.png"/>
+		<link rel="apple-touch-icon" type="image/png" href="png/favicon180.png">
+		<link rel="manifest" href="/manifest.json">
 
     </head>
     
@@ -19,11 +22,11 @@
                 <span>Mobile view in progress! Check out the site on desktop instead :)</span>
             </div>
        
-        <main data-barba = "container">
+        <main data-barba = "container" data-barba-namespace = "project">
 
             <div class = "sidebar">
                 
-                <a class = "back icon" href = "index.html">
+                <a class = "back icon left" href = "index.html">
                     <div class = "img-bg">
                         <img src = "glyphs/back-arrow.svg">
                     </div>
@@ -351,15 +354,17 @@
         </main>
 
 		
-
-                
-        <script src = "jquery-3.5.1.min.js"></script>
-        <script src = "p5.min.js"></script>
-	    <script src = "draggabilly.pkgd.min.js"></script>
-        <script src = "svg.js"></script>
-        <script src = "projectPages.js"></script>
-
-
+        <script src="p5.min.js"></script>
+        <script src="draggabilly.pkgd.min.js"></script>
+        <script src="app.js"></script>
+        <script src="content.js"></script>
+        <script src="svg.js"></script>
+        <script src="projectPages.js"></script>
+        <script src = "contentful.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
+        <script src = "barba-prefetch.js"></script>
+        <script src = "gsap.js"></script>
+        <script src = "transitionsBaby.js"></script>
     
 
     </body>

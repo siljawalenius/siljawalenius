@@ -1,0 +1,21 @@
+{
+    "name": "Silja Walenius",
+    "short_name": "Hi Silja!",
+    "description": "Designer and Developer in Toronto",
+    "icons": [
+        {
+            "src": "png/android192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "png/android512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "../index.html",
+    "theme_color": "#e5e5e5",
+    "background_color": "#90bba9",
+    "display": "standalone"
+}

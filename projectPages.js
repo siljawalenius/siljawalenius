@@ -1,12 +1,7 @@
-//grab previous and next div tags
-const prevTags = document.querySelectorAll(".back-next .previous")
-const nextTags = document.querySelectorAll(".back-next .next")
 
 //use forEach on each section to grab titles and arrows
 
-
-
-const moveTags = (tags) =>{
+moveTags = (tags) =>{
 
     tags.forEach(tag => {
 
@@ -16,11 +11,11 @@ const moveTags = (tags) =>{
     let arrowSide
     let titleSide
 
-    if (tags == prevTags){
+    if (tag.classList.contains("previous")){
         arrowSide = arrow.getBoundingClientRect().left;
         titleSide = title.getBoundingClientRect().left;
         //console.log ("running on previous!")
-    } else if (tags == nextTags){
+    } else if (tag.classList.contains("next")){
         arrowSide = arrow.getBoundingClientRect().right;
         titleSide = title.getBoundingClientRect().right;
        // console.log("running on next!")
@@ -47,6 +42,7 @@ const moveTags = (tags) =>{
     })
 
 }
-
+let prevTags = document.querySelectorAll(".back-next .previous")
+let nextTags = document.querySelectorAll(".back-next .next")
 moveTags(prevTags)
 moveTags(nextTags)

@@ -9,8 +9,9 @@
 		<link rel="stylesheet" href="/_base.css">
 		<link rel="stylesheet" href="/style.css">
 		<link rel="stylesheet" href="/variables.css">
-		<link rel = "stylesheet" href = "sidebar.css">
-		<link rel = "stylesheet" href = "z_mediastyle.css">
+		<link rel="shortcut icon" type="image/png" href="png/favicongreen48.png"/>
+		<link rel="apple-touch-icon" type="image/png" href="png/favicon180.png">
+		<link rel="manifest" href="/manifest.json">
 	</head>
 	<body class = "index" data-barba = "wrapper">
 		<div class = "media-overlay">
@@ -20,8 +21,7 @@
 
 
 		
-	
-	<main data-barba = "container" data-barba-namespace="contact">
+	<main data-barba = "container" data-barba-namespace="index">
 		<div class = "sidebar">
 
 	
@@ -132,7 +132,7 @@
 					<div class = "project-container mflabs card-l">
 						<div class = "tile-container">
 							<div class = "tile-info">
-								<a href = "materialfutures.html">
+								<a href = "materialfutures.html" class = "left pink">
 									<div class = "tile"></div>
 								</a>
 									<div class = "info rotate">Design, UX, Build</div>
@@ -146,7 +146,7 @@
 							<div class = "tile-container">
 								<div class = "tile-info">
 									<div class = "info rotate">Logo, Design, UX</div>
-									<a href = "datalabs.html">
+									<a href = "datalabs.html" class = "right yellow">
 										<div class = "tile"></div>
 									</a>
 								</div>
@@ -158,7 +158,7 @@
 					<div class = "project-container pay-interns card-l">
 						<div class = "tile-container">
 							<div class = "tile-info">
-								<a href = "payinterns.html">
+								<a href = "payinterns.html" class = "left green">
 									<div class = "tile"></div>
 								</a>
 								<div class = "info rotate">Design, UX, Build</div>
@@ -172,7 +172,7 @@
 						<div class = "tile-container">
 							<div class = "tile-info">
 								<div class = "info rotate">Student: Design, Code, UX</div>
-								<a href = "superhi.html">
+								<a href = "superhi.html" class = "right blue">
 									<div class = "tile"></div>
 								</a>
 							</div>
@@ -263,7 +263,7 @@
 	
 					</div>
 	
-					<a href = "sketchbook.html">
+					<a href = "sketchbook.html" class = "yellow">
 						<div class = "sketchbook-button">
 							<h2>plus, check out my sketchbook here</h2>
 						</div>
@@ -356,12 +356,19 @@
 
 		</main>
 
-		<script src = "jquery-3.5.1.min.js"></script>
 		<script src = "p5.min.js"></script>
 		<script src = "draggabilly.pkgd.min.js"></script>
-		<script src = "svg.js"></script>
 		<script src = "app.js"></script>
 		<script src = "content.js"></script>
+		<script src = "svg.js"></script>
+		<script src = "projectPages.js"></script>
+		<script src = "contentful.js"></script>
+		
+
+		<script src="https://unpkg.com/@barba/core"></script>
+        <script src = "barba-prefetch.js"></script>
+        <script src = "gsap.js"></script>
+        <script src = "transitionsBaby.js"></script>
 	
 
 	</body>
