@@ -10,9 +10,11 @@ nextTags = document.querySelectorAll(".back-next .next");
 //declaring all global vars here to avoid them being double declared
 let xPoints, cardTags, cardContainer, draggies, cardArray, qs;
 
+console.log("🤟🏼🚀🌙hand coded with love by @siljawalenius 🌙🚀🤟🏼")
+
 barba.use(barbaPrefetch);
 barba.init({
-  debug: true,
+  debug: false,
   transitions: [
     {
       name: "rightSwipe",
@@ -63,7 +65,7 @@ barba.init({
             .to(proj, { opacity: 1, x: 0 }, 0)
             .to(wiper, { x: "100%" }, 1);
         });
-      },
+      }
     },
     {
       name: "leftSwipe",
@@ -123,9 +125,8 @@ barba.init({
         runBigWaves();
         runSmallWaves();
         placeElements();
-        isIndex()
+        drawIndexShapes();
         
-
 
         window.addEventListener("resize", () => {
           placeElements();
@@ -154,6 +155,7 @@ barba.init({
       namespace: "project",
       beforeEnter(data) {
         //console.log("project:beforeEnter");
+        destroyAnimations();
         runBigWaves();
         let prevTags = document.querySelectorAll(".back-next .previous");
         let nextTags = document.querySelectorAll(".back-next .next");
@@ -165,9 +167,10 @@ barba.init({
     {
       namespace: "sketchbook",
       beforeEnter(data) {
+        destroyAnimations();
         console.log("project:beforeEnter");
         runBigWaves();
-        $.getScript("contentful.js", () => {});
+        runContentfulOnLoad();
         window.scroll(0,0)
       },
     },

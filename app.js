@@ -2,6 +2,7 @@
 //cardTags, containers are consts
 //draggies is a let
 //card array is a let
+const twoPi = Math.PI * 2;
 
 const runDraggies = () => {
   cardTags = document.querySelectorAll(".draggable");
@@ -31,43 +32,60 @@ const runDraggies = () => {
   });
 };
 
-const isIndex = () => {
+let contactSection = document.querySelector("section.contact");
+
+const indexShape = (sketch) => {
+  sketch.setup = () => {
+    sketch.createCanvas(450, 450);
+
+    contactSection.appendChild(sketch.canvas);
+  };
+
+  sketch.draw = () => {
+    sketch.background("transparent");
+    sketch.push();
+    sketch.noStroke();
+    sketch.translate(sketch.width * 0.5, sketch.height * 0.5);
+    sketch.fill("#E2EEF1");
+    sketch.rotate(sketch.frameCount / -200.0);
+    polygon(0, 0, 170, 6, sketch);
+    sketch.pop();
+  };
+};
+
+//save as a global (is there a better way to do this?)
+let drawIndexShape; 
+
+
+//remove all shapes when you leave the page
+let removeShapes = () => {
+  drawIndexShape.remove();
+};
+
+//draw all shapes on index load
+const drawIndexShapes = () => {
   if (document.querySelector("body").classList.contains("index")) {
-  return true;
+    contactSection = document.querySelector("section.contact");
+    //console.log(contactSection);
+
+    //this line actually draws the shape
+    drawIndexShape = new p5(indexShape);
+
+    //console.log("drawn");
+    return true;
   } else {
     return false;
   }
 };
 
-
-let contactSection = document.querySelector("section.contact");
-
-        
-  //polygon
-  function setup() {
-    createCanvas(450, 450);
-    contactSection.appendChild(canvas);
-    // console.log(contactSection);
+//instantiated polygon function
+function polygon(x, y, radius, npoints, sketch) {
+  let angle = sketch.TWO_PI / npoints;
+  sketch.beginShape();
+  for (let a = 0; a < sketch.TWO_PI; a += angle) {
+    let sx = x + sketch.cos(a) * radius;
+    let sy = y + sketch.sin(a) * radius;
+    sketch.vertex(sx, sy);
   }
-
-  function draw() {
-    background("transparent");
-    push();
-    noStroke();
-    translate(width * 0.5, height * 0.5);
-    fill("#E2EEF1");
-    rotate(frameCount / -200.0);
-    polygon(0, 0, 170, 6);
-    pop();
-  }
-
-  function polygon(x, y, radius, npoints) {
-    let angle = TWO_PI / npoints;
-    beginShape();
-    for (let a = 0; a < TWO_PI; a += angle) {
-      let sx = x + cos(a) * radius;
-      let sy = y + sin(a) * radius;
-      vertex(sx, sy);
-    }
-    endShape(CLOSE);
-  }
+  sketch.endShape(sketch.CLOSE);
+}
