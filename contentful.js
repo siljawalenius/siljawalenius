@@ -6,10 +6,10 @@ const url = `https://cdn.contentful.com/spaces/${spaceID}/environments/${envID}/
 //console.log(url)
 
 const runContentfulOnLoad = () => {
-  const bodyTag = document.querySelector("body");
 
-  if (bodyTag.classList.contains("sketchbook")) {
-    const container = document.querySelector("div.container");
+  let container = document.querySelector("div.container");
+  //console.log(container.classList)
+  if (container.classList.contains("sketchbook-container")) {
 
     const grabData = function () {
       return fetch(url)
@@ -52,4 +52,4 @@ const runContentfulOnLoad = () => {
   }
 };
 
-runContentfulOnLoad();
+//runContentfulOnLoad();

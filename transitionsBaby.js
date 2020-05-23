@@ -103,7 +103,6 @@ barba.init({
               resolve();
             },
           });
-
           const proj = next.container.querySelector(".project-container");
 
           timeline
@@ -167,10 +166,9 @@ barba.init({
     {
       namespace: "sketchbook",
       beforeEnter(data) {
-        destroyAnimations();
-        console.log("project:beforeEnter");
-        runBigWaves();
         runContentfulOnLoad();
+        destroyAnimations();
+        runBigWaves();
         window.scroll(0,0)
       },
     },
