@@ -1142,7 +1142,7 @@ img.project-main {
 
 .full-img{
 
-    max-height: 100vh;
+    height: 100vh;
     display:flex;
     justify-content:center;
     align-content:center;
