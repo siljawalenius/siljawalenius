@@ -1379,3 +1379,18 @@ div.page{
     height:100%;
 }
 
+
+@media (max-width:1200px){
+	.full-img{
+		height:fit-content;
+		max-height: 100vh;
+    	min-height: 40vh;
+    	margin-top: 60px;
+	}
+
+	.footer-container {
+		padding: 40px 40px;
+		max-width:100vw;
+	}
+
+}
