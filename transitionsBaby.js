@@ -172,5 +172,5 @@ barba.init({
         window.scroll(0,0)
       },
     },
-  ],
+  ]
 });
