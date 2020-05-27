@@ -873,7 +873,8 @@ div.project-container{
 
 .project-hero{
     margin-top: 30px;
-    height:100vh;
+    max-height: 100vh;
+    margin-bottom: 120px;
 }
 .project-page-header{
     display:flex;
@@ -924,7 +925,7 @@ div.project-container{
     background-color: var(--blue);
 
     max-width:100%;
-    height:60vh;
+    max-height:60vh;
 
     overflow: hidden;
 }
@@ -1030,7 +1031,7 @@ img.project-main {
 }
 
 .gallery-site{
-    height:260px;
+    max-height:260px;
     width:30%;
     background-color:var(--blue);
     margin-bottom:30px;
@@ -1083,7 +1084,7 @@ img.project-main {
 
 .full-width-img{
     width:100%;
-    height:60vh;
+    max-height:60vh;
 
     margin-bottom: 50px;
 
@@ -1153,7 +1154,7 @@ img.project-main {
 
 .full-img .img-frame{
     width:75vw;
-    height:70vh;
+    max-height:70vh;
 
     position:absolute;
 
@@ -1378,3 +1379,18 @@ div.page{
     height:100%;
 }
 
+
+@media (max-width:1200px){
+	.full-img{
+		height:fit-content;
+		max-height: 100vh;
+    	min-height: 40vh;
+    	margin-top: 60px;
+	}
+
+	.footer-container {
+		padding: 40px 40px;
+		max-width:100vw;
+	}
+
+}
