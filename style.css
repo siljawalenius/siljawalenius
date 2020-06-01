@@ -1457,7 +1457,12 @@ div.page{
 	path{
 		stroke-width: 8px;
 	}
+
+	div.container{
+		padding:0 30px;
+	}
 	.sidebar{
+		display:none;
 		left:10px;
 	}
 
@@ -1475,6 +1480,7 @@ div.page{
 		width:100%;
 		height:100%;
 	}
+
 
     
 	.hero-sentence{
@@ -1538,23 +1544,29 @@ div.page{
 	}
 
 	/* PROJECTS SECTION */
-	.project-container .tile-container .tile{
-		width:160px;
-		height:160px;
-	}
-	.project-title{
-		font-size:20px;
-		white-space: nowrap;
+	.section-divider{
+		margin-bottom: 50px;
 	}
 
-	.projects div.info{
-		font-size:9px;
+	.project-container .tile-container .tile{
+		width:200px;
+		height:200px;
+	}
+	.project-title{
+		font-size:24px;
+		white-space: nowrap;
+		left:35%;
 	}
 
 	.card-r .project-title {
 		top: 80%;
 		left: 15%;
 	}
+
+	.projects div.info{
+		display:none;
+	}
+
 
 
 
@@ -1608,7 +1620,7 @@ div.page{
 		border: 2px solid var(--yellow);
 	}
 	.sketchbook-button h2{
-		font-size:16px;
+		font-size:18px;
 	}
 
 
@@ -1619,7 +1631,7 @@ div.page{
 	}
 
 	.cards .section-title{
-		font-size: 19px;
+		font-size: 22px;
 		white-space: normal;
 	}
 
@@ -1634,11 +1646,21 @@ div.page{
 	}
 
 
+
 	/* LAST SECTION */
+
+	
+	div.svg-contact {
+		width: 110%;
+		left: -5px;
+	}
 
 	.contact-main{
 		padding-top:120px;
-		
+	}
+
+	.contact-main h1{
+		margin-bottom: 50px;
 	}
 
 	.social-icon{
@@ -1648,7 +1670,7 @@ div.page{
 	}
 
 	.email-link{
-		margin-top:30px;
+		margin-top:40px;
 	}
 
 	.end-line{
@@ -1662,5 +1684,10 @@ div.page{
 		max-height:30px;
 		padding:5px;
 	}
+	.contact canvas{
+	top: 20%;
+    left: 30%;
+	}
+
 
 }
