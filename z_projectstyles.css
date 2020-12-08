@@ -224,7 +224,7 @@ img.project-main {
 }
 
 .full-width-img img{
-    position: abosolute;
+    position: absolute;
     bottom:0;
     max-width: 100%;
 }
