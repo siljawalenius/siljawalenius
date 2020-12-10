@@ -702,7 +702,7 @@ div.card-r  .tile-container{
 
 .card-4{
 	background-color:var(--green);
-	color:#ffffff;
+	color:var(--brown);
 	z-index:5;
 	top:90px;
 }

@@ -134,6 +134,7 @@ barba.init({
         document
           .querySelector("span.name")
           .addEventListener("mouseover", () => {
+            //console.log("mouseover!")
             document.querySelector("span.pronounce").classList.add("visible");
           });
         document.querySelector("span.name").addEventListener("mouseout", () => {
