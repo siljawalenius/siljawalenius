@@ -1406,7 +1406,7 @@ div.page{
 
 @media(max-width: 600px){
     .media-overlay{
-        display:none;
+        display:flex;
         justify-content:center;
         align-items: center;
 

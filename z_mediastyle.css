@@ -32,4 +32,8 @@
         overflow: hidden;
     }
 
+    main{
+        display: none;
+    }
+
 }
