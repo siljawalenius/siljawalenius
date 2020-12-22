@@ -10,7 +10,7 @@ Check out https://www.siljawalenius.com/ for the full experience
 SuperHi student hall of fame: https://www.superhi.com/hall-of-fame/portfolio-by-silja
 
 
-# Lighthouse Scores
+## Lighthouse Scores
 
 ![lighthouse scores](/lighthousescore.png)
 
