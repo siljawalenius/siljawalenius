@@ -5,7 +5,7 @@ Check out https://www.siljawalenius.com/ for the full experience
 
 (Mobile version currently in progress!) 
 
-##Cool recognitions
+## Cool recognitions
 
 SuperHi student hall of fame: https://www.superhi.com/hall-of-fame/portfolio-by-silja
 
