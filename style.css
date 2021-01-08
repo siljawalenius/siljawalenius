@@ -1164,7 +1164,7 @@ img.project-main {
     width:75vw;
     max-height:70vh;
 
-    position:absolute;
+    /* position:absolute; */
 
     background-color: var(--yellow)
 
@@ -1370,6 +1370,10 @@ a.footer-mail{
 
 /* SKETCHBOOK STYLES */
 
+div.sketchbook-container{
+	margin-top: 30px;
+}
+
 div.page{
     background-color: var(--yellow);
     width:100%;
@@ -1406,7 +1410,7 @@ div.page{
 
 @media(max-width: 600px){
     .media-overlay{
-        display:flex;
+        display:none;
         justify-content:center;
         align-items: center;
 
@@ -1459,21 +1463,16 @@ div.page{
 	}
 
 	div.container{
-		padding:0 30px;
-	}
-	.sidebar{
-		display:none;
-		left:10px;
+		padding:0 50px;
 	}
 
-	.sidebar a.record{
-		left:10px;
+	.sidebar, .sidebar a.record{
+		left:9px;
 	}
-	
 
 	.sidebar a.icon{
-		width: 35px;
-		height:35px;
+		width: 29px;
+		height:29px;
 	}
 
 	.img-bg{
@@ -1481,7 +1480,9 @@ div.page{
 		height:100%;
 	}
 
-
+	.pronounce{
+		font-size: 12px;
+	}
     
 	.hero-sentence{
 		max-width:200px;
@@ -1518,9 +1519,14 @@ div.page{
 		display:none;
 	}
 
+	div.svg.wave-small{
+		height: 6px;
+	}
+
 	.wave-name path{
 		stroke-width: 3px;
 	}
+
 
 	div.arrow{
 		width: 35px;
@@ -1545,17 +1551,18 @@ div.page{
 
 	/* PROJECTS SECTION */
 	.section-divider{
-		margin-bottom: 50px;
+		margin-bottom: 54px;
 	}
 
 	.project-container .tile-container .tile{
-		width:200px;
-		height:200px;
+		width:184px;
+		height:170px;
 	}
 	.project-title{
 		font-size:24px;
 		white-space: nowrap;
 		left:35%;
+		text-shadow:none;
 	}
 
 	.card-r .project-title {
@@ -1572,6 +1579,25 @@ div.page{
 
 
 	/* RESUME STYLES */ 
+
+	.cv .section-divider {
+		margin-bottom:  60px;
+		flex-direction: column;
+	}
+
+	.cv div.svg{
+		position:absolute;
+		width: 100%;
+		margin-left: 0;
+
+	}
+
+	.cv div.svg svg.wave {
+		width: 100%;
+		position:relative;
+		left: -5px;
+		margin-top: 30px;
+	}
 
 	.columns{
 		flex-direction:column;
@@ -1627,12 +1653,21 @@ div.page{
 	/* CARDS */ 
 
 	.cards{
-		height: 130vh;
+		height: 90vh;
+		padding-top: 50px;
+	}
+
+	.card-container{
+		top: -60px;
+		height: 100%;
 	}
 
 	.cards .section-title{
 		font-size: 22px;
 		white-space: normal;
+		text-align: center;
+		margin-left: 10%;
+		margin-right: 10%;
 	}
 
 	.goal-card{
@@ -1685,9 +1720,87 @@ div.page{
 		padding:5px;
 	}
 	.contact canvas{
-	top: 20%;
-    left: 30%;
+		top: 20%;
+    	left: 30%;
 	}
 
+	/* PROJECT PAGES */
+
+	.project-hero{
+		margin-bottom: 60px;
+	}
+
+	.project-hero .main-img{
+		margin-top: 30px;
+	}
+
+	.info-left{
+		width: 100%;
+	}
+	.info-right{
+		display:none;
+	}
+
+	.project-info{
+		margin-bottom: 30px;
+	}
+
+
+	.half-img-text .content{ 
+		flex-direction:column;
+	}
+	.half-width-img{
+		width: 100%;
+	}
+
+	.half-width-text{
+		width:100%;
+	}
+
+	.full-img{
+		margin-top: 30px;
+		min-height:  10vh;
+	}
+
+	.back-next span{
+		font-size: 12px;
+	}
+
+	.back-next .title{
+		font-size: 18px;
+	}
+
+	.previous .arrow-container, .next .arrow-container{
+		display:none;
+	}
+
+	.back-next{
+		margin-top: 50px;
+	}
+
+	.footer-container{
+		flex-direction: column;
+		width: 100%;
+		align-items: flex-start;
+	}
+
+	.footer-intouch{
+		font-size: 14px;
+	}
+
+	a.footer-mail{
+		font-size: 20px;
+	}
+
+	.project-footer .cv-socials{ 
+		justify-content: flex-start;
+		padding-top : 30px;
+	}
+
+	/* SKETCHBOOK STYLES */
+
+	div.page{
+		margin-bottom: 40px;
+	}
 
 }

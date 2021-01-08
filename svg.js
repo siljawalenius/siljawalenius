@@ -17,8 +17,16 @@ function runBigWaves() {
     //map each point to a specific place using sin waves
     let points = xPoints.map((x) => {
       // y = height from top + Math.sin(x/frequency) + amplitude
-      let y = 33 + Math.sin((x + t) / 15) * 15;
+      //for phone styles
 
+       //desktop
+       let y = 33 + Math.sin((x + t) / 15) * 15;
+
+       //mobile
+      if (window.innerWidth <= 600){
+        y = 33 + Math.sin((x + t) / 10) * 15;
+      }
+      
       return [x, y];
     });
 
@@ -68,6 +76,10 @@ function runSmallWaves() {
     let points = qs.map((x) => {
       // y = height from top + Math.sin(x/frequency) + amplitude
       let y = 10 + Math.sin((x + t) / 6) * 6;
+      if (window.innerWidth <= 600){
+        y = 3 + Math.sin((x + t) / 3) * 1.5;
+      }
+      
       return [x, y];
       console.log(y)
     });
@@ -128,12 +140,21 @@ placeElements = () => {
   let nameYTop = name.getBoundingClientRect().top;
   let nameW = name.getBoundingClientRect().width;
 
+
+  if (window.innerWidth > 600){
+    //for desktop styles
+    pronounceText.style.top = nameYTop - 50 + `px`;
+    pronounceText.style.left = nameX - nameW / 2.5 + `px`;
+  
+  } else {
+    //for phone styles
+    pronounceText.style.top = nameYTop - 30 + `px`;
+    pronounceText.style.left = nameX - nameW / 1.1 + `px`;
+  }
+
   nameWave.style.top = window.pageYOffset + nameY + `px`;
   nameWave.style.left = nameX + `px`;
   nameWave.style.width = nameW - 6 + `px`;
-
-  pronounceText.style.top = nameYTop - 50 + `px`;
-  pronounceText.style.left = nameX - nameW / 2.5 + `px`;
 
   if (nameY === 0 || nameX === 0) {
     nameWave.style.top = `380px`;
@@ -143,4 +164,22 @@ placeElements = () => {
     pronounceText.style.top = `270px`;
     pronounceText.style.left = `357.43px`;
   }
+
+  //add event listener to name on mobile 
+
+  
+    name.addEventListener("click", function (){
+      pronounceText.classList.add("visible")
+
+      // set opacity back to 0 after 3s
+
+      setTimeout( function (){
+        pronounceText.classList.remove("visible")
+      }, 3000)
+
+    })
+
+  
+
+ 
 };

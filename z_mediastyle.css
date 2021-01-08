@@ -1,6 +1,6 @@
 @media(max-width: 600px){
     .media-overlay{
-        display:flex;
+        display:none;
         justify-content:center;
         align-items: center;
 
