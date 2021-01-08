@@ -1762,6 +1762,10 @@ div.page{
 		min-height:  10vh;
 	}
 
+	.gallery{
+		margin-bottom: 30px;
+	}
+
 	.back-next span{
 		font-size: 12px;
 	}
@@ -1797,6 +1801,27 @@ div.page{
 		padding-top : 30px;
 	}
 
+	.courses-content{
+		flex-direction: column;
+	}
+
+	.course-col{
+		width: 100%
+	}
+
+	.course-col:nth-child(2n){
+		padding-left: 0;
+	}
+	.course-col:first-child {
+		padding-right: 0px;
+	}
+
+	.course-col .course-title h2{
+		font-size:16px;
+	}
+
+
+
 	/* SKETCHBOOK STYLES */
 
 	div.page{
@@ -1805,11 +1830,12 @@ div.page{
 
 }
 
+
 @media (max-width: 369px){
 	h1{
 		font-size: 20px;
     	white-space: normal;
-    	text-align: center;
+    	text-align: left;
 	}
 	.project-title{
 		font-size: 18px;
@@ -1835,6 +1861,7 @@ div.page{
 	}
 
 	.contact-main h1 {
+		text-align: left;
 		margin-bottom: 20px;
 	}
 
@@ -1842,6 +1869,60 @@ div.page{
 		font-size: 14px;
 	}
 
+	.contact{
+		margin-bottom: 30px;
+	}
+
+
+
+
+	/* project styles */
+
+	p.info-text{
+		font-size: 14px;
+	}
+
+	.back-next span {
+		font-size: 10px;
+	}
+
+	.back-next .text-container, .text-container.text-container.datalabs{
+		width: 90px;
+	}
+
+	.back-next .previous span{
+		display: inline-block;
+		max-width: 60px;
+	}
+
+
+	.projects .section-divider {
+		margin-bottom: 0px;
+	}
+
+	.projects .project-container.mflabs{
+		margin-top: 70px;
+	}
+
+	/* goal cards */
+
+	.goal-card{
+		width: 170px;
+    	height: 145px;
+	}
+	.goal-card span {
+		font-size: 14px;
+	}
+
+	.under-text{
+		top: 250px;
+		left: 50%;
+		font-size: 14px;
+		max-width: 150px;
+
+		transform: translateX(-50%);
+
+	}
 
 
 }
