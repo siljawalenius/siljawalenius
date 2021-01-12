@@ -284,6 +284,8 @@ span.words{
 	font-weight:600;
 	text-align:center;
 
+	white-space: nowrap;
+
 	width:100%;
 
 	transition: transform 0.3s ease;

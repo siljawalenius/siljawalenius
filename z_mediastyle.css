@@ -37,3 +37,56 @@
     }
 
 }
+
+
+
+
+@media (max-width: 369px){
+	h1{
+		font-size: 20px;
+    	white-space: normal;
+    	text-align: center;
+	}
+	.project-title{
+		font-size: 18px;
+	}
+	.project-container .tile-container .tile {
+		width: 144px;
+		height: 135px;
+	}
+	li {
+		font-size: 14px;
+	}
+	.cv-socials {
+		padding-left: 2px;
+		padding-right: 4px;
+	}
+
+	.sketchbook-button h2 {
+		font-size: 14px;
+	}
+
+	.end-line{
+		font-size: 16px;
+	}
+
+	.contact-main h1 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	h2.email-link, .contact-main p{
+		font-size: 14px;
+	}
+
+	.contact{
+		margin-bottom: 30px;
+	}
+
+
+	/* project styles */
+
+	p.info-text{
+		font-size: 14px;
+	}
+}
