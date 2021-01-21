@@ -7,6 +7,8 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🌱 I’m currently learning ...  SparkAR and React (and Python ... slowly but surely)
 
+🧚 Next on the list ... App development!! 
+
 🎧 Current Jams - <a href = "https://open.spotify.com/playlist/4YEU1ouKgP4HDPqoYOD2cm?si=7c81a3jBS4ikVmyL42lUJA"> This</a> playlist
 
 📫 How to reach me: My instagram and email are linked on <a href = "https://www.siljawalenius.com/" > my portfolio </a>
