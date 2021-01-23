@@ -9,7 +9,7 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🧚 Next on the list ... App development!! 
 
-🎧 Current Jams - <a href = "https://open.spotify.com/playlist/4YEU1ouKgP4HDPqoYOD2cm?si=7c81a3jBS4ikVmyL42lUJA"> This</a> playlist
+🎧 Current Jams - <a href = "https://open.spotify.com/playlist/37i9dQZF1DWWUJdr9ahsbf?si=iO-bf5E3TwK6moWMNoIU1A"> Spice Girls</a> forever
 
 📫 How to reach me: My instagram and email are linked on <a href = "https://www.siljawalenius.com/" > my portfolio </a>
 
