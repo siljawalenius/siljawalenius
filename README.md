@@ -7,7 +7,7 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🌱 I’m currently learning ...  SparkAR and React (and Python ... slowly but surely)
 
-🧚 Next on the list ... App development!! 
+🧚 Next on the list ... App development and webGL  
 
 🎧 Current Jams - <a href = "https://open.spotify.com/playlist/37i9dQZF1DWWUJdr9ahsbf?si=iO-bf5E3TwK6moWMNoIU1A"> Spice Girls</a> forever
 
