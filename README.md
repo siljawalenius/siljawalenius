@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm currently studying engineering and designing websites. I love learning more about sustainability and sustainable tech, and finding intersections between my architecture and engineering studies. 
+I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm currently studying engineering and designing websites. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
 
 
 🔭 I’m currently working on ...  SouperHi - a React site about soup recipes, and a bunch of small shaders projects :) 
