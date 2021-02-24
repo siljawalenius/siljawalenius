@@ -5,7 +5,7 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🔭 I’m currently working on ...  SouperHi - a React site about soup recipes, and a bunch of small shaders projects :) 
 
-🌱 I’m currently learning ...  Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> and React with Wes Bos 
+🌱 I’m currently learning ...  Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> ) and React with Wes Bos 
 
 🧚 Next on the list ... Probably more three.js and GSAP  
 
