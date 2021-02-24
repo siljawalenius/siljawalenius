@@ -7,7 +7,7 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🌱 I’m currently learning ...  Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> ) and React with Wes Bos 
 
-🧚 Next on the list ... Probably more three.js and GSAP  
+🧚 Next on the list ... more three.js and GSAP
 
 🎧 Current Jams - <a href = "https://open.spotify.com/playlist/4VQJ13dUONstWOTYUAiLGm?si=YjBxfltPT5m-E3t0NczrHg"> My Serotonin Playlist </a>
 
