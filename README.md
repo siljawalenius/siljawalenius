@@ -5,7 +5,7 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🔭 I’m currently working on ...  <a href = "https://github.com/siljawalenius/Advanced-React">Advanced React</a>, and a bunch of small shaders projects :) 
 
-🌱 I’m currently learning ...  Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> ) and Advanced React 
+🌱 I’m currently learning ...  Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> )
 
 🧚 Next on the list ... more three.js, GSAP, and experimenting with circuits! 
 
