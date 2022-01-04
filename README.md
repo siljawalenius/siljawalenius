@@ -17,4 +17,4 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 🔮 Next Up... I'm headed to Delft for an exchane term! ✨
 
-![](https://komarev.com/ghpvc/?username=siljawalenius)
+![](https://komarev.com/ghpvc/?username=siljawalenius&color=8AA98C)
