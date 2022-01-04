@@ -15,3 +15,4 @@ I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm cur
 
 ⚡ Fun fact: I'm currently training to become a yoga teacher! 🧘‍♀️
 
+🔮 Next Up... I'm headed to Delft for an exchane term! ✨
