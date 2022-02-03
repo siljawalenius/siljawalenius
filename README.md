@@ -3,9 +3,9 @@
 I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm currently studying engineering and designing websites. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
 
 
-🔭 I’m currently working on ...  a bunch of small shaders projects, and ReMade Earth (coming soon!)
+🔭 I’m currently working on ...  a bunch of small shaders projects, and a three js solar system
 
-🌱 I’m currently learning ...  ThreeJS and Shaders (with <a href = "https://www.superhi.com/"> SuperHi </a> )
+🌱 I’m currently learning ...  ThreeJS and Shaders
 
 🧚 Next on the list ... experimenting with circuits
 
