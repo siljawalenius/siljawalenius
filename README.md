@@ -3,15 +3,15 @@
 I'm Silja (she/her) - a coder and designer based out of Toronto, Canada. I'm currently studying engineering and designing websites. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
 
 
-🔭 I’m currently working on ...  a bunch of small shaders projects, and a three js solar system
+🔭 I’m currently working on ...  a bunch of small shaders projects, a three js solar system, and a three js breathing app 
 
-🌱 I’m currently learning ...  ThreeJS and Shaders
+🌱 I’m currently learning ...  loads of webGL stuff 
 
 🧚 Next on the list ... experimenting with circuits
 
-🎧 Current Jams - <a href = "https://open.spotify.com/playlist/2gNshD82pELPnE2CYeCLkp?si=4def9e25997842ce"> restinggg </a>
+🎧 Current Jams - <a href = "https://open.spotify.com/playlist/2gNshD82pELPnE2CYeCLkp?si=4def9e25997842ce"> palo santo playlist </a>
 
-📫 How to reach me: My instagram and email are linked on <a href = "https://www.siljawalenius.com/" > my portfolio </a>
+📫 How to reach me: My <a href = "https://www.siljawalenius.com/" > portfolio </a>, or instagram (@siljawalenius) 
 
 ⚡ Fun fact: I'm currently training to become a yoga teacher! 🧘‍♀️
 
