@@ -13,7 +13,7 @@ I'm Silja (she/her/they) - a coder and designer based out of Toronto, Canada. I'
 
 📫 How to reach me: My <a href = "https://www.siljawalenius.com/" > portfolio </a>, or instagram (@siljawalenius) 
 
-⚡ Fun fact: I'm currently training to become a yoga teacher! 🧘‍♀️
+⚡ Fun fact: I'm currently learning to make my own candles 
 
 🔮 Next Up... I'm headed to Delft for an exchange term! ✨
 
