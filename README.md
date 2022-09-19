@@ -7,7 +7,7 @@ I'm Silja (she/her/they) - a coder and designer based out of Toronto, Canada. I'
 
 🌱 I’m currently learning ...  lots of fun things relating to security development!
 
-🧚 Next on the list ... we'll see!
+🧚 Next on the list ... project management with Superhi! 
 
 🎧 Current Jams - <a href = "https://open.spotify.com/playlist/2gNshD82pELPnE2CYeCLkp?si=4def9e25997842ce"> palo santo playlist </a>
 
