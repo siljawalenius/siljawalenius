@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-I'm Silja (she/her/they) - an engineer and designer based out of Toronto, Canada. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
+I'm Silja (she/her) - an engineer and designer based out of Toronto, Canada. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
 
 
 🔭 I’m currently working on ...  a new portfolio site 👀
