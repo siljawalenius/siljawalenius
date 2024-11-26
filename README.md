@@ -1,11 +1,10 @@
 ### Hi there 👋
 
-I'm Silja (she/her) - an engineer and designer based out of Toronto, Canada. I love learning more about sustainable tech, and finding intersections between my architecture and engineering studies.  
-
+I'm Silja (she/her) - an engineer and designer based out of Toronto, Canada. I love learning more about sustainable & environmental tech, and finding intersections between my architecture and engineering studies.  
 
 🔭 I’m currently working on ...  a new portfolio site 👀
 
-🌱 I’m currently learning ...  lots of fun things relating to security development, and also how to knit!
+🌱 I’m currently learning about ...  complex interface design & human factors in engineering
 
 🧚 Next on the list ... project management with Superhi! 
 
@@ -15,6 +14,6 @@ I'm Silja (she/her) - an engineer and designer based out of Toronto, Canada. I l
 
 ⚡ Fun fact: I think I met Timothee Chalamet at a rock climbing gym once
 
-🔮 Next Up... I'm looking for my first full time engineering job!✨
+🔮 Next Up... tbd!! 
 
 ![](https://komarev.com/ghpvc/?username=siljawalenius&color=8AA98C)
